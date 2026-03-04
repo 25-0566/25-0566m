@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUX DEALERSHIP - Classic Luxury Cars</title>
     
-    <!-- External CSS (also covers "online CSS") -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
     
     <!-- Internal CSS -->
@@ -64,34 +64,38 @@
             margin: 30px 0;
         }
         
-        /* ===== NEW STYLES FOR ASSIGNMENT 1.2.5 ===== */
-        /* Internal CSS for Paragraph 2, Highlight 2, Building 2 */
+        /* ===== ASSIGNMENT STYLES (INTERNAL) ===== */
+        /* For Paragraph 2 */
         .internal-paragraph {
             color: orange;
             font-weight: bold;
         }
+        /* For Highlight 2 (first h2) */
         .internal-highlight {
-            color: teal;      /* choose any color */
+            color: teal;
         }
+        /* For Building 2 (second h3) */
         .internal-building {
-            color: maroon;     /* choose any color */
+            color: maroon;
         }
-        /* ===== END NEW INTERNAL STYLES ===== */
+        /* ===== END INTERNAL STYLES ===== */
     </style>
 </head>
 <body>
     <!-- Header with Background Colour -->
     <div class="header-bg">
         <div class="container" style="text-align: center;">
-            <h1>LUX DEALERSHIP</h1>
-            <h2>Luxury cars that never age and defined by heritage and style.</h2>
+            <!-- FIRST H1: Highlight 1 (external CSS) -->
+            <h1 class="online-highlight">Highlight 1: LUX DEALERSHIP</h1>
+            <!-- FIRST H2: Highlight 2 (internal CSS) -->
+            <h2 class="internal-highlight">Highlight 2: Luxury cars that never age and defined by heritage and style.</h2>
         </div>
     </div>
     
     <!-- Container 1: Welcome Section -->
     <div class="container" style="background-color: #ffffff;">
-        <p style="font-size: 1.2rem; text-align: center;">Welcome to a luxury dealership where timeless design meets automotive excellence.
-        Specializing in iconic luxury vehicles from the 1980s and 1990s, we celebrate an era of old days</p>
+        <!-- FIRST PARAGRAPH: Paragraph 1 (inline CSS: blue, italics) -->
+        <p style="color: blue; font-style: italic;">Paragraph 1: Welcome to a luxury dealership where timeless design meets automotive excellence. Specializing in iconic luxury vehicles from the 1980s and 1990s, we celebrate an era of old days</p>
         
         <!-- Centered Images -->
         <div style="text-align: center;">
@@ -107,6 +111,11 @@
         <div style="text-align: center; margin: 30px 0;">
             <iframe width="866" height="487" src="https://www.youtube.com/embed/trNKhWv8sD4" title="Welcome To Retro Classic Car | Showroom Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100%; border: 4px solid #b8860b; border-radius: 10px;"></iframe>
         </div>
+    </div>
+    
+    <!-- SECOND H1: Highlight 3 (external CSS) - added here because only one h1 existed -->
+    <div class="container" style="text-align: center;">
+        <h1 class="external-highlight">Highlight 3: Timeless Craftsmanship</h1>
     </div>
     
     <!-- Container 2: Featured Cars -->
@@ -140,17 +149,18 @@
     
     <!-- Container 3: Vehicle Details -->
     <div class="container" style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); border-left: 5px solid #b8860b; padding: 25px;">
-        <!-- Headings (4) -->
+        <!-- SECOND PARAGRAPH: Paragraph 2 (internal CSS: orange, bold) -->
+        <p class="internal-paragraph">Paragraph 2: <b>Our meticulously restored 1980s and 1990s luxury vehicles represent the pinnacle of handcrafted automotive heritage, offering a driving experience that transcends modern mass-produced machines.</b></p>
+        
+        <!-- Headings -->
         <h2 style="text-align: center;">Vehicle Showcase & Specifications</h2>
-        <h3 style="color: #8b4513;">Classic Models In Detail</h3>
+        <!-- FIRST H3: Building 1 (inline CSS) -->
+        <h3 style="color: green;">Building 1: Classic Models In Detail</h3>
         <h4 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Engine & Performance Metrics</h4>
         <h5>Interior Dimensions & Materials</h5>
         
-        <!-- One bold sentence -->
-        <p style="background-color: #fff3e0; padding: 15px; border-radius: 5px;"><b>Our meticulously restored 1980s and 1990s luxury vehicles represent the pinnacle of handcrafted automotive heritage, offering a driving experience that transcends modern mass-produced machines.</b></p>
-        
-        <!-- Two underlined sentences -->
-        <p><u>Every vehicle in our collection undergoes a comprehensive 150-point inspection to ensure authenticity and mechanical perfection.</u> <u>We provide a detailed provenance report with each sale, tracing the unique history of your future classic automobile.</u></p>
+        <!-- THIRD PARAGRAPH: Paragraph 3 (external CSS: purple, underline) -->
+        <p class="external-paragraph">Paragraph 3: <u>Every vehicle in our collection undergoes a comprehensive 150-point inspection to ensure authenticity and mechanical perfection.</u> <u>We provide a detailed provenance report with each sale, tracing the unique history of your future classic automobile.</u></p>
     </div>
     
     <!-- Container 4: Technical Specifications -->
@@ -213,6 +223,8 @@ and line breaks exactly as written.
                 <li>White-glove delivery coordination</li>
                 <li>Access to exclusive owner events</li>
             </ul>
+            <!-- SECOND H3: Building 2 (internal CSS) -->
+            <h3 class="internal-building">Building 2: Concierge Services</h3>
         </div>
         
         <!-- Ordered list -->
@@ -242,6 +254,8 @@ and line breaks exactly as written.
                     </ul>
                 </li>
             </ul>
+            <!-- THIRD H3: Building 3 (external CSS) -->
+            <h3 class="external-building">Building 3: Inspection Excellence</h3>
         </div>
     </div>
     
@@ -274,7 +288,8 @@ and line breaks exactly as written.
             </tbody>
         </table>
     </div>
-<!-- Footer with Background -->
+    
+    <!-- Footer with Background -->
     <div class="footer-bg">
         <div class="container" style="text-align: center;">
             <footer>
