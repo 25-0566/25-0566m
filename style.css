@@ -160,3 +160,24 @@ blockquote {
     background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
     border-radius: 10px;
 }
+
+/* ===== NEW STYLES FOR ASSIGNMENT 1.2.5 ===== */
+/* External CSS for Paragraph 3, Highlight 1, Highlight 3, Building 3 */
+
+.external-paragraph {
+    color: purple;
+    text-decoration: underline;
+}
+
+.online-highlight {      /* used for Highlight 1 */
+    color: darkcyan;
+}
+
+.external-highlight {    /* used for Highlight 3 */
+    color: darkred;
+}
+
+.external-building {     /* used for Building 3 */
+    color: olive;
+}
+/* ===== END NEW EXTERNAL STYLES ===== */
