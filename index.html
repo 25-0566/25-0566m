@@ -3,105 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUX DEALERSHIP | Home</title>
+    <title>LUX DEALERSHIP - Classic Luxury Cars</title>
+
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .header-bg {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+        
+        .specials-bg {
+            background-color: #f9f1e0;
+            padding: 30px 0;
+        }
+        
+        .footer-bg {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #b8860b;
+        }
+        
+        table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .highlight {
+            color: #8b0000;
+            font-weight: bold;
+        }
+        
+        .quote-section {
+            font-style: italic;
+            border-left: 4px solid #d4af37;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        /* ===== ASSIGNMENT STYLES (INTERNAL) ===== */
+        /* For Paragraph 2 */
+        .internal-paragraph {
+            color: orange;
+            font-weight: bold;
+        }
+        /* For Highlight 2 (first h2) */
+        .internal-highlight {
+            color: teal;
+        }
+        /* For Building 2 (second h3) */
+        .internal-building {
+            color: maroon;
+        }
+        /* ===== END INTERNAL STYLES ===== */
+    </style>
 </head>
 <body>
-    <header>
-        <h1>LUX DEALERSHIP</h1>
-        <p>Timeless elegance, driven forward</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="inventory.html">Inventory</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section with Background Image -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Where Classics Live Forever</h2>
-            <p>Curated luxury automobiles from the golden era</p>
-            <a href="inventory.html" class="btn">Explore Collection</a>
-        </div>
-    </section>
-
-    <div class="container">
-        <!-- Two-column intro -->
-        <div class="two-column">
-            <div class="column">
-                <h2 style="color: #d4af37;">Heritage & Style</h2>
-                <p class="lead">We don't just sell cars; we curate heirlooms. Each vehicle in our collection is a masterpiece of design and engineering, restored to its original glory.</p>
-                <p>Founded in 2010, LUX DEALERSHIP has become a destination for connoisseurs who appreciate the craftsmanship of 1980s and 1990s luxury automobiles. From the purr of a Mercedes V8 to the sharp lines of a BMW coupe, we bring the past into the present.</p>
-            </div>
-            <div class="column">
-                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600" alt="Classic car" style="width:100%; border-radius:15px; border:3px solid #d4af37;">
-            </div>
-        </div>
-
-        <!-- Featured Cars Carousel -->
-        <h2 style="color: #d4af37; margin-top: 60px;">Featured Classics</h2>
-        <div class="carousel">
-            <div class="card" style="min-width: 250px;">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400" alt="BMW" style="width:100%; border-radius:10px;">
-                <h3>1989 BMW 635CSi</h3>
-                <p>$28,500</p>
-            </div>
-            <div class="card" style="min-width: 250px;">
-                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400" alt="Mercedes" style="width:100%; border-radius:10px;">
-                <h3>1991 Mercedes 500SL</h3>
-                <p>$32,000</p>
-            </div>
-            <div class="card" style="min-width: 250px;">
-                <img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=400" alt="Porsche" style="width:100%; border-radius:10px;">
-                <h3>1988 Porsche 911</h3>
-                <p>$49,500</p>
-            </div>
-        </div>
-
-        <!-- Media Container -->
-        <h2 style="color: #d4af37;">In Motion</h2>
-        <div class="media-container">
-            <div class="media-item">
-                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400" alt="Engine">
-            </div>
-            <div class="media-item">
-                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400" alt="Interior">
-            </div>
-            <div class="media-item">
-                <iframe src="https://www.youtube.com/embed/trNKhWv8sD4" title="Classic Car Showroom" allowfullscreen></iframe>
-            </div>
-            <div class="media-item">
-                <iframe src="https://www.youtube.com/embed/8jX7ukI6e4Y" title="Classic Car Drive" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <!-- Testimonial -->
-        <div style="background: rgba(212,175,55,0.1); padding: 30px; border-radius: 15px;">
-            <p style="font-style: italic; font-size: 1.3rem;">"The attention to detail is unmatched. Driving my 560SEC feels like time travel." – James R.</p>
+    
+    <!-- Header with Background Colour -->
+    <div class="header-bg">
+        <div class="container" style="text-align: center;">
+            <!-- FIRST H1: Highlight 1 (external CSS) -->
+            <h1 class="online-highlight">LUX DEALERSHIP</h1>
+            <a href="https://25-0566.github.io/25-0566m/rud.html" style="color:white; text-decoration: none; font-weight: bold;">Assignment 3</a>
+        
+  <header>
+            <!-- FIRST H2: Highlight 2 (internal CSS) -->
+            <h2 class="internal-highlight">Luxury cars that never age and defined by heritage and style.</h2>
         </div>
     </div>
-
-    <!-- YOUR VIDEO ADDED HERE – just above the footer -->
-    <div class="container" style="text-align: center; margin-bottom: 20px;">
-        <h2 style="color: #d4af37; font-family: 'Playfair Display', serif;">A Glimpse of Luxury</h2>
-        <div style="max-width: 900px; margin: 0 auto;">
-            <video width="100%" controls poster="path-to-thumbnail.jpg" 
-                   style="border-radius: 15px; border: 4px solid #d4af37; box-shadow: 0 20px 30px rgba(0,0,0,0.5);">
-                <source src="3f0933eeff4edab35a27bfd4386fb1dc.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    
+    <!-- Container 1: Welcome Section -->
+    <div class="container" style="background-color: #ffffff;">
+        <!-- FIRST PARAGRAPH: Paragraph 1 (inline CSS: blue, italics) -->
+        <p style="color: blue; font-style: italic;">Welcome to a luxury dealership where timeless design meets automotive excellence. Specializing in iconic luxury vehicles from the 1980s and 1990s, we celebrate an era of old days</p>
+        
+        <!-- Centered Images -->
+        <div style="text-align: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShPMxtMZYnjNnCrcByRwMjx4RKKPLbEJKiiMDIb2tFjQ&s=10"
+              width="350" height="350" alt="BMW E30" style="margin: 10px; border: 3px solid #d4af37; border-radius: 8px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixwr9j9OCLds3ukoUPbWEG25nVnCqidCFxdPlUuJRzA6S1FZDM2dh_EE&s=10"
+            width="350" height="350" alt="Chevy" style="margin: 10px; border: 3px solid #d4af37; border-radius: 8px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMxavkZLsavQV3fFZoecGX4a5b3ENnmajI-XbEj7Wo_g&s=10"
+              width="350" height="350" alt="Mercedes" style="margin: 10px; border: 3px solid #d4af37; border-radius: 8px;">
+        </div>
+        
+        <!-- Centered Video -->
+        <div style="text-align: center; margin: 30px 0;">
+            <iframe width="866" height="487" src="https://www.youtube.com/embed/trNKhWv8sD4" title="Welcome To Retro Classic Car | Showroom Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100%; border: 4px solid #b8860b; border-radius: 10px;"></iframe>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 LUX DEALERSHIP. All rights reserved.</p>
-        <p>123 Heritage Ave, Auto City | +1 (555) 123-4567</p>
-    </footer>
+    
+    <!-- SECOND H1: Highlight 3 (external CSS) - added to have a second h1 -->
+    <div class="container" style="text-align: center;">
+        <h1 class="external-highlight">Timeless Craftsmanship</h1>
+    </div>
+    
+    <!-- Container 2: Featured Cars -->
+    <div class="container" style="background-color: #f5f5f5; border-radius: 15px; margin: 30px auto;">
+        <h2 style="text-align: center; color: #8b4513;">Featured Collection</h2>
+        
+        <!-- Table 1: Basic Inventory -->
+        <table border="1" cellpadding="10" style="margin: 0 auto; width: 80%; background-color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <tr style="background-color: #d4af37; color: white;">
+                <th>Car Brand</th>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Chevrolet</td>
+                <td>Impala</td>
+                <td style="color: #006400; font-weight: bold;">$4500</td>
+            </tr>
+            <tr>
+                <td>BMW</td>
+                <td>BMWe30</td>
+                <td style="color: #006400; font-weight: bold;">$2500</td>
+            </tr>
+            <tr>
+                <td>Mercedes Benz</td>
+                <td>Mercedes-Benz 450 sel</td>
+                <td style="color: #006400; font-weight: bold;">$5000</td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- Container 3: Vehicle Details -->
+    <div class="container" style="background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); border-left: 5px solid #b8860b; padding: 25px;">
+        <!-- SECOND PARAGRAPH: Paragraph 2 (internal CSS: orange, bold) -->
+        <p class="internal-paragraph"><b>Our meticulously restored 1980s and 1990s luxury vehicles represent the pinnacle of handcrafted automotive heritage, offering a driving experience that transcends modern mass-produced machines.</b></p>
+        
+        <!-- Headings -->
+        <h2 style="text-align: center;">Vehicle Showcase & Specifications</h2>
+        <!-- FIRST H3: Building 1 (inline CSS) -->
+        <h3 style="color: green;">Classic Models In Detail</h3>
+        <h4 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Engine & Performance Metrics</h4>
+        <h5>Interior Dimensions & Materials</h5>
+        
+        <!-- THIRD PARAGRAPH: Paragraph 3 (external CSS: purple, underline) -->
+        <p class="external-paragraph"><u>Every vehicle in our collection undergoes a comprehensive 150-point inspection to ensure authenticity and mechanical perfection.</u> <u>We provide a detailed provenance report with each sale, tracing the unique history of your future classic automobile.</u></p>
+    </div>
+    
+    <!-- Container 4: Technical Specifications -->
+    <div class="container specials-bg" style="border-radius: 10px;">
+        <!-- Supscript & Subscript -->
+        <p>Our covers 2,500M<sup>2</sup> and maintains a constant temperature of 22°C<sup>*</sup>. The V12 engine produces 350Hp<sup>†</sup> with 400Lb-ft<sup>‡</sup> of torque. Vehicle weight is under 1,800KG<sub>curb</sub>. The CO<sub>2</sub> emissions are class-leading. We use H<sub>2</sub>O-based paints. The legendary M88<sub>1</sub> engine is available.</p>
+        
+        <!-- Del tag -->
+        <p>Special offers: <del>$55,000 MSRP</del> <del>$2,500 shipping fee</del> <del>18% luxury tax</del> <del>1-year waitlist</del>. <span style="color: #b22222; font-weight: bold;">Current pricing includes all fees.</span></p>
+        
+        <!-- Mark tag -->
+        <p><mark>Financing approved today</mark> | <mark>Limited 5-year warranty</mark> | <mark>Complimentary delivery</mark> | <mark>Only 2 units remaining</mark>.</p>
+        
+        <!-- Speech marks -->
+        <div class="quote-section">
+            <p>Our founder often says, "We don't just sell cars; we curate heirlooms." A recent client noted, "The attention to detail is unmatched." As the brochure states, "Heritage is standard." Another remarked, "It's like stepping back in time, but with modern reliability."</p>
+        </div>
+    </div>
+    
+    <!-- Container 5: Philosophy & Services -->
+    <div class="container" style="background-color: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.05);">
+        <!-- Block quote -->
+        <blockquote style="font-size: 1.1rem; color: #555; text-align: center;">
+            Owning a classic luxury car is about connecting with an era of uncompromising design.<br>
+            The roar of the engine, the smell of the leather, the weight of the steering wheel.<br>
+            It's an emotional and sensory experience that modern vehicles often fail to deliver.<br>
+            This is why we preserve these masterpieces for future generations to enjoy and admire.
+        </blockquote>
+        
+        <!-- Line breaks -->
+        <p style="text-align: center;">
+            Our sales team is available seven days a week for personal consultations.<br>
+            We invite you to schedule a private viewing of our climate-controlled collection.<br>
+            Complimentary concierge pickup and delivery is included with every purchase.<br>
+            Experience the legacy of luxury with a personalized test drive appointment today.
+        </p>
+        
+        <!-- HR tag -->
+        <p>The classic car market continues to appreciate annually.</p>
+        <hr style="border: 1px solid #d4af37; width: 50%;">
+        <p>We offer insured worldwide shipping for all vehicle purchases.</p>
+        <hr style="border: 1px solid #d4af37; width: 50%;">
+        <p>Join our mailing list for exclusive first looks at new arrivals.</p>
+        
+        <!-- Pre tag -->
+        <pre style="background-color: #2c2c2c; color: #d4af37; padding: 15px; border-radius: 5px;">
+This is a preformatted block.
+    It preserves both spaces
+and line breaks exactly as written.
+        </pre>
+    </div>
+    
+    <!-- Services Section with Lists -->
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <!-- Unordered list -->
+        <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+            <h4>Standard Concierge Services:</h4>
+            <ul style="list-style-type: square; color: #8b4513;">
+                <li>Personalized vehicle sourcing</li>
+                <li>White-glove delivery coordination</li>
+                <li>Access to exclusive owner events</li>
+            </ul>
+            <!-- SECOND H3: Building 2 (internal CSS) -->
+            <h3 class="internal-building">Concierge Services</h3>
+        </div>
+        
+        <!-- Ordered list -->
+        <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+            <h4>Post-Purchase Steps:</h4>
+            <ol style="color: #8b4513;">
+                <li>Complete title transfer paperwork.</li>
+                <li>Schedule your vehicle orientation.</li>
+                <li>Register for our owner's club.</li>
+            </ol>
+        </div>
+        
+        <!-- Nested list -->
+        <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+            <h4>Inspection Checklist (Partial):</h4>
+            <ul>
+                <li>Mechanical Systems
+                    <ul style="list-style-type: circle;">
+                        <li>Engine compression test</li>
+                        <li>Transmission fluid analysis</li>
+                    </ul>
+                </li>
+                <li>Body & Interior
+                    <ul style="list-style-type: circle;">
+                        <li>Original paint thickness check</li>
+                        <li>Leather conditioning assessment</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- THIRD H3: Building 3 (external CSS) -->
+            <h3 class="external-building">Inspection Excellence</h3>
+        </div>
+    </div>
+    
+    <!-- Detailed Inventory Table -->
+    <div class="container" style="overflow-x: auto;">
+        <h4 style="text-align: center;">Detailed Inventory & Pricing</h4>
+        <table border="1" cellpadding="5" style="border-collapse: collapse; width: 100%; background-color: white;">
+            <caption style="caption-side: bottom; padding: 10px; font-style: italic;">Table 2: Current LUX DEALERSHIP Inventory - February 2026</caption>
+            <thead>
+                <tr style="background-color: #b8860b; color: white;">
+                    <th>Year</th> <th>Brand</th> <th>Model</th> <th>Color</th> <th>Mileage</th> <th>Engine</th> <th>Price (USD)</th> <th>Stock #</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1989</td><td>BMW</td><td>635CSi</td><td>Bronzit</td><td>89,000</td><td>3.5L I6</td><td>$28,500</td><td>L001</td></tr>
+                <tr style="background-color: #f5f5f5;"><td>1991</td><td>Mercedes</td><td>500SL</td><td>Arctic White</td><td>72,000</td><td>5.0L V8</td><td>$32,000</td><td>L002</td></tr>
+                <tr><td>1994</td><td>Jaguar</td><td>XJS</td><td>British Racing Green</td><td>65,000</td><td>4.0L I6</td><td>$19,900</td><td>L003</td></tr>
+                <tr style="background-color: #f5f5f5;"><td>1988</td><td>Porsche</td><td>911 Carrera</td><td>Guards Red</td><td>95,000</td><td>3.2L H6</td><td>$49,500</td><td>L004</td></tr>
+                <tr><td>1990</td><td>Lexus</td><td>LS400</td><td>Pearl White</td><td>110,000</td><td>4.0L V8</td><td>$15,000</td><td>L005</td></tr>
+                <tr style="background-color: #f5f5f5;"><td>1986</td><td>Mercedes</td><td>560SEC</td><td>Nautical Blue</td><td>78,000</td><td>5.5L V8</td><td>$38,000</td><td>L006</td></tr>
+                <tr><td>1995</td><td>BMW</td><td>850Ci</td><td>Oxford Green</td><td>83,000</td><td>5.4L V12</td><td>$42,000</td><td>L007</td></tr>
+                <tr style="background-color: #f5f5f5;"><td>1987</td><td>Ferrari</td><td>328 GTS</td><td>Rosso Corsa</td><td>42,000</td><td>3.2L V8</td><td>$89,000</td><td>L008</td></tr>
+                <tr>
+                    <td rowspan="2" style="vertical-align: middle; background-color: #b8860b; color: white;">1992</td>
+                    <td>Chevrolet</td> <td>Corvette C4</td> <td>Torch Red</td> <td>58,000</td> <td>5.7L V8</td> <td>$18,500</td> <td>L009</td>
+                </tr>
+                <tr>
+                    <td>Chevrolet</td> <td>Impala SS</td> <td>Black</td> <td>62,000</td> <td>5.7L V8</td> <td>$23,000</td> <td>L010</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+   
+ 
+<footer>   
+    
+    
+    <!-- Footer with Background -->
+    <div class="footer-bg">
+        <div class="container" style="text-align: center;">
+            <footer>
+                <p>© 2026 LUX DEALERSHIP. All rights reserved. | Contact: info@luxdealership.com | Address: 123 Heritage Ave, Auto City</p>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
    
