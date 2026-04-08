@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUX DEALERSHIP | Classic Luxury Cars</title>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* ========== RESET & GLOBAL ========== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Cormorant Garamond', serif;
@@ -27,7 +23,7 @@
             line-height: 1.5;
         }
 
-        /* ========== NAVIGATION ========== */
+        /* Navigation */
         .nav-bar {
             background: #0a0a0a;
             padding: 15px 40px;
@@ -76,34 +72,24 @@
             text-transform: uppercase;
         }
 
-        .nav-menu li a:hover,
-        .nav-menu li a.active {
+        .nav-menu li a:hover, .nav-menu li a.active {
             color: #d4af37;
         }
 
-        /* ========== CONTAINER ========== */
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 40px 30px;
         }
 
-        /* ========== SECTION SWITCHING ========== */
-        .section {
-            display: none;
-        }
-
+        .section { display: none; }
         .section.active {
             display: block;
             animation: fadeIn 0.4s ease;
         }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* ========== HERO ========== */
+        /* Hero */
         .hero {
             text-align: center;
             padding: 60px 30px;
@@ -139,7 +125,6 @@
             letter-spacing: 2px;
         }
 
-        /* ========== BUTTONS ========== */
         .cta-btn {
             display: inline-block;
             padding: 10px 30px;
@@ -161,7 +146,6 @@
             color: #0a0a0a;
         }
 
-        /* ========== SECTION TITLES ========== */
         .section-title {
             text-align: center;
             font-size: 2rem;
@@ -180,7 +164,7 @@
             letter-spacing: 3px;
         }
 
-        /* ========== CAR CARDS - With Proper Image Sizing ========== */
+        /* Car Cards */
         .car-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -194,10 +178,12 @@
             overflow: hidden;
             border: 1px solid #2a2a2a;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .car-card:hover {
             border-color: #d4af3740;
+            transform: translateY(-3px);
         }
 
         .car-image {
@@ -255,15 +241,15 @@
             font-weight: 400;
         }
 
-        .image-ref {
+        .click-hint-small {
             font-size: 0.65rem;
-            color: #504838;
+            color: #706858;
             margin-top: 10px;
-            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* ========== SPECIAL OFFER ========== */
+        /* Special Offer */
         .special-offer {
             background: #0f0f0f;
             border: 1px solid #d4af3720;
@@ -307,7 +293,7 @@
             font-weight: 400;
         }
 
-        /* ========== ABOUT PAGE ========== */
+        /* About Page */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -379,10 +365,7 @@
             font-size: 0.9rem;
         }
 
-        .contact-item .icon {
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
+        .contact-item .icon { font-size: 1.1rem; opacity: 0.8; }
 
         .contact-highlight {
             color: #0a0a0a !important;
@@ -393,7 +376,6 @@
             font-size: 0.85rem;
         }
 
-        /* ========== VALUES GRID ========== */
         .values-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -409,26 +391,11 @@
             border: 1px solid #2a2a2a;
         }
 
-        .value-icon {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            opacity: 0.7;
-        }
+        .value-icon { font-size: 1.8rem; margin-bottom: 12px; opacity: 0.7; }
+        .value-item h4 { color: #d4af37; font-size: 0.95rem; margin-bottom: 6px; font-weight: 400; letter-spacing: 2px; }
+        .value-item p { color: #908878; font-size: 0.8rem; }
 
-        .value-item h4 {
-            color: #d4af37;
-            font-size: 0.95rem;
-            margin-bottom: 6px;
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-
-        .value-item p {
-            color: #908878;
-            font-size: 0.8rem;
-        }
-
-        /* ========== GALLERY ========== */
+        /* Gallery */
         .gallery-filters {
             display: flex;
             justify-content: center;
@@ -451,8 +418,7 @@
             letter-spacing: 2px;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
+        .filter-btn:hover, .filter-btn.active {
             background: #d4af37;
             color: #0a0a0a;
             border-color: #d4af37;
@@ -475,6 +441,7 @@
 
         .gallery-item:hover {
             border-color: #d4af3740;
+            transform: translateY(-3px);
         }
 
         .gallery-image {
@@ -494,9 +461,7 @@
             display: block;
         }
 
-        .gallery-image .placeholder-icon {
-            font-size: 2rem;
-        }
+        .gallery-image .placeholder-icon { font-size: 2rem; }
 
         .gallery-info {
             padding: 15px;
@@ -515,13 +480,6 @@
             font-weight: 400;
         }
 
-        .image-ref-gallery {
-            font-size: 0.6rem;
-            color: #605848;
-            margin-top: 8px;
-            text-transform: uppercase;
-        }
-
         .click-hint {
             font-size: 0.65rem;
             color: #706858;
@@ -530,7 +488,128 @@
             letter-spacing: 1px;
         }
 
-        /* ========== FOOTER ========== */
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-card {
+            background: #0f0f0f;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #d4af37;
+            padding: 30px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5rem;
+            color: #d4af37;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-weight: 300;
+        }
+
+        .modal-header {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .modal-image {
+            width: 250px;
+            height: 160px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #d4af3740;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-title h3 {
+            font-size: 1.8rem;
+            color: #d4af37;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .modal-title .modal-price {
+            font-size: 1.5rem;
+            color: #e0dcd5;
+            margin-bottom: 10px;
+        }
+
+        .modal-title .modal-year {
+            color: #a89060;
+            font-size: 1rem;
+        }
+
+        .modal-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px 25px;
+            margin-bottom: 25px;
+            padding: 20px 0;
+            border-top: 1px solid #d4af3720;
+            border-bottom: 1px solid #d4af3720;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .detail-label {
+            color: #908878;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .detail-value {
+            color: #e0dcd5;
+            font-size: 1rem;
+        }
+
+        .modal-description {
+            color: #b0a898;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .modal-contact {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        /* Footer */
         .footer {
             background: #080808;
             padding: 30px;
@@ -556,87 +635,45 @@
             font-size: 0.8rem;
         }
 
-        /* ========== BACK BUTTON ========== */
         .back-home {
             text-align: center;
             margin-top: 35px;
         }
 
-        /* ========== RESPONSIVE ========== */
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
         @media (max-width: 900px) {
-            .nav-bar {
-                flex-direction: column;
-                gap: 12px;
-                padding: 15px 20px;
-            }
-            
-            .car-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+            .nav-bar { flex-direction: column; gap: 12px; padding: 15px 20px; }
+            .car-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-content { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 2.5rem; }
         }
-
+        @media (max-width: 700px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 600px) {
-            .nav-menu {
-                gap: 20px;
-            }
-            
-            .car-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-                letter-spacing: 3px;
-            }
-            
-            .hero h2 {
-                font-size: 0.9rem;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
-            }
+            .nav-menu { gap: 20px; }
+            .car-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; letter-spacing: 3px; }
+            .hero h2 { font-size: 0.9rem; }
+            .section-title { font-size: 1.6rem; }
+            .modal-header { flex-direction: column; }
+            .modal-image { width: 100%; height: 200px; }
         }
-
-        @media (max-width: 400px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 450px) {
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<!-- ========== NAVIGATION ========== -->
+<!-- Navigation -->
 <nav class="nav-bar">
-    <div class="logo">
-        LUX DEALERSHIP
-        <span>EST. 2014</span>
-    </div>
+    <div class="logo">LUX DEALERSHIP<span>EST. 2014</span></div>
     <ul class="nav-menu">
         <li><a href="#" class="nav-link active" data-section="home">HOME</a></li>
         <li><a href="#" class="nav-link" data-section="about">ABOUT</a></li>
@@ -644,10 +681,9 @@
     </ul>
 </nav>
 
-<!-- ========== HOME SECTION ========== -->
+<!-- Home Section -->
 <section id="home" class="section active">
     <div class="container">
-        
         <div class="hero">
             <h1>LEGENDS NEVER DIE</h1>
             <h2>THEY JUST GET BETTER WITH AGE</h2>
@@ -657,49 +693,7 @@
         
         <h2 class="section-title">FEATURED <span>Collection</span></h2>
         
-        <div class="car-grid">
-            <!-- Ferrari F355 Spider - WITH REAL IMAGE -->
-            <div class="car-card">
-                <div class="car-image">
-                    <img src="https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg" alt="1977 Ferrari F355 Spider">
-                </div>
-                <div class="car-info">
-                    <h3>1977 Ferrari</h3>
-                    <p class="car-model">F355 Spider</p>
-                    <p class="car-specs">Rosso Corsa • 42k mi • V8</p>
-                    <p class="car-price">$89,000</p>
-                    <p class="image-ref">📸 MPM Cars Collection</p>
-                </div>
-            </div>
-            
-            <!-- Chevrolet Impala -->
-            <div class="car-card">
-                <div class="car-image">
-                    <span class="placeholder-icon">🚗</span>
-                </div>
-                <div class="car-info">
-                    <h3>1960 Chevrolet</h3>
-                    <p class="car-model">Impala 2-Door</p>
-                    <p class="car-specs">Glacier Blue • 58k mi • V8</p>
-                    <p class="car-price">$45,000</p>
-                    <p class="image-ref">24957bbfeb7a5d62a16bbf3bbb0134c5.jpg</p>
-                </div>
-            </div>
-            
-            <!-- Chevrolet Chevelle -->
-            <div class="car-card">
-                <div class="car-image">
-                    <span class="placeholder-icon">🏁</span>
-                </div>
-                <div class="car-info">
-                    <h3>1970 Chevrolet</h3>
-                    <p class="car-model">Chevelle SS</p>
-                    <p class="car-specs">Tuxedo Black • 62k mi • 454 V8</p>
-                    <p class="car-price">$72,500</p>
-                    <p class="image-ref">12de8c45d327164401834313162c2bee.jpg</p>
-                </div>
-            </div>
-        </div>
+        <div class="car-grid" id="featuredCars"></div>
         
         <div class="special-offer">
             <h3>THE INNER CIRCLE</h3>
@@ -708,103 +702,68 @@
             <p><strong>Membership is complimentary with your first acquisition.</strong></p>
             <a href="#" class="cta-btn nav-link" data-section="about" style="margin-top: 25px;">LEARN MORE</a>
         </div>
-        
     </div>
 </section>
 
-<!-- ========== ABOUT SECTION ========== -->
+<!-- About Section -->
 <section id="about" class="section">
     <div class="container">
-        
         <h2 class="section-title">ABOUT <span>LUX DEALERSHIP</span></h2>
-        
         <div class="about-content">
             <div class="about-text">
                 <h3>Our Story</h3>
                 <p class="highlight-text">Founded in 2014 by Rudolph Maina, LUX DEALERSHIP began with a singular vision: to preserve and celebrate the golden era of automotive excellence.</p>
                 <p>What started as a passionate restoration project in a modest Westlands garage has grown into one of East Africa's most trusted classic car dealerships.</p>
                 <p>Today, LUX DEALERSHIP stands as a testament to timeless design, offering meticulously curated vehicles that tell stories of innovation, luxury, and the open road.</p>
-                <div class="founder-quote">
-                    "Every classic car has a soul. Our job is to help it find its next chapter."
-                    <br>— Rudolph Maina, Founder
-                </div>
+                <div class="founder-quote">"Every classic car has a soul. Our job is to help it find its next chapter."<br>— Rudolph Maina, Founder</div>
             </div>
-            
             <div class="contact-card">
                 <h3>Visit Us</h3>
-                <div class="contact-item">
-                    <span class="icon">📍</span>
-                    <span class="contact-highlight">Westlands, near GTC Residence</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📞</span>
-                    <span class="contact-highlight">+254 716 822 856</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">✉️</span>
-                    <span>concierge@luxdealership.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">🕐</span>
-                    <span>Mon - Sat: 9AM - 7PM</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">🌐</span>
-                    <span>Sunday: By Appointment</span>
-                </div>
+                <div class="contact-item"><span class="icon">📍</span><span class="contact-highlight">Westlands, near GTC Residence</span></div>
+                <div class="contact-item"><span class="icon">📞</span><span class="contact-highlight">+254 716 822 856</span></div>
+                <div class="contact-item"><span class="icon">✉️</span><span>concierge@luxdealership.com</span></div>
+                <div class="contact-item"><span class="icon">🕐</span><span>Mon - Sat: 9AM - 7PM</span></div>
+                <div class="contact-item"><span class="icon">🌐</span><span>Sunday: By Appointment</span></div>
                 <a href="#" class="cta-btn nav-link" data-section="gallery" style="margin-top: 25px; display: inline-block;">VIEW COLLECTION</a>
             </div>
         </div>
-        
         <div class="values-grid">
-            <div class="value-item">
-                <div class="value-icon">✓</div>
-                <h4>150-POINT INSPECTION</h4>
-                <p>Rigorous certification</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">📋</div>
-                <h4>FULL PROVENANCE</h4>
-                <p>Complete documentation</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">❄️</div>
-                <h4>CLIMATE STORAGE</h4>
-                <p>Premium care</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">🌍</div>
-                <h4>GLOBAL DELIVERY</h4>
-                <p>White-glove shipping</p>
-            </div>
+            <div class="value-item"><div class="value-icon">✓</div><h4>150-POINT INSPECTION</h4><p>Rigorous certification</p></div>
+            <div class="value-item"><div class="value-icon">📋</div><h4>FULL PROVENANCE</h4><p>Complete documentation</p></div>
+            <div class="value-item"><div class="value-icon">❄️</div><h4>CLIMATE STORAGE</h4><p>Premium care</p></div>
+            <div class="value-item"><div class="value-icon">🌍</div><h4>GLOBAL DELIVERY</h4><p>White-glove shipping</p></div>
         </div>
-        
     </div>
 </section>
 
-<!-- ========== GALLERY SECTION ========== -->
+<!-- Gallery Section -->
 <section id="gallery" class="section">
     <div class="container">
-        
         <h2 class="section-title">THE <span>Collection</span></h2>
-        
         <div class="gallery-filters">
             <button class="filter-btn active" data-filter="all">ALL</button>
             <button class="filter-btn" data-filter="ferrari">FERRARI</button>
             <button class="filter-btn" data-filter="chevrolet">CHEVROLET</button>
-            <button class="filter-btn" data-filter="european">EUROPEAN</button>
+            <button class="filter-btn" data-filter="bmw">BMW</button>
+            <button class="filter-btn" data-filter="mercedes">MERCEDES</button>
+            <button class="filter-btn" data-filter="porsche">PORSCHE</button>
+            <button class="filter-btn" data-filter="jaguar">JAGUAR</button>
+            <button class="filter-btn" data-filter="range-rover">RANGE ROVER</button>
         </div>
-        
         <div class="gallery-grid" id="galleryGrid"></div>
-        
-        <div class="back-home">
-            <a href="#" class="cta-btn nav-link" data-section="home">← BACK TO HOME</a>
-        </div>
-        
+        <div class="back-home"><a href="#" class="cta-btn nav-link" data-section="home">← BACK TO HOME</a></div>
     </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- Modal -->
+<div class="modal-overlay" id="carModal">
+    <div class="modal-card">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <p class="footer-main">© 2026 LUX DEALERSHIP</p>
@@ -813,6 +772,100 @@
 </footer>
 
 <script>
+    // Complete Car Database with specs
+    const cars = [
+        { id:1, year:1977, make:'Ferrari', model:'F355 Spider', price:89000, engine:'3.5L V8', power:'375 hp', torque:'268 lb-ft', topSpeed:'183 mph', acceleration:'4.7 sec', transmission:'6-speed Manual', mileage:'42,000', color:'Rosso Corsa', description:'The Ferrari F355 Spider represents the pinnacle of 1990s Italian engineering. With its iconic Pininfarina design and the legendary 3.5L V8 that sings to 8,500 RPM, this Spider offers an open-air experience like no other. A true collector\'s piece that combines raw emotion with Ferrari heritage.', image:'https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg', brand:'ferrari' },
+        { id:2, year:1960, make:'Chevrolet', model:'Impala 2-Door', price:45000, engine:'283 V8', power:'230 hp', torque:'300 lb-ft', topSpeed:'115 mph', acceleration:'9.5 sec', transmission:'2-speed Powerglide', mileage:'58,000', color:'Glacier Blue', description:'The 1960 Chevrolet Impala is the definition of American cruising. With its iconic triple tail lights and spacious interior, this 2-door hardtop represents the height of 1960s style. The 283 V8 provides smooth, reliable power perfect for weekend drives and car shows.', image:'https://fleesphotos.com/wp-content/uploads/2020/01/1960-chevy-impala-hard-top-2-flees-photos-1024x682.jpg', brand:'chevrolet' },
+        { id:3, year:1970, make:'Chevrolet', model:'Chevelle SS', price:72500, engine:'454 LS6 V8', power:'450 hp', torque:'500 lb-ft', topSpeed:'130 mph', acceleration:'5.8 sec', transmission:'4-speed Manual', mileage:'62,000', color:'Tuxedo Black', description:'The 1970 Chevelle SS with the legendary LS6 454 is one of the most feared muscle cars of all time. With 450 horsepower on tap, this numbers-matching example delivers brutal acceleration and an exhaust note that demands respect. A true American icon.', image:'https://images.mecum.com/image/upload/c_fill,f_auto,g_center,q_auto,w_1600,h_899/v1713876869/auctions/SC24/1118254/598166.jpg', brand:'chevrolet' },
+        { id:4, year:1989, make:'BMW', model:'635CSi', price:28500, engine:'3.5L M30 I6', power:'208 hp', torque:'225 lb-ft', topSpeed:'140 mph', acceleration:'7.5 sec', transmission:'5-speed Manual', mileage:'89,000', color:'Bronzit Beige', description:'The BMW 635CSi is the ultimate grand tourer of the 1980s. Designed by Paul Bracq, the E24 chassis offers timeless shark-nose styling combined with BMW\'s legendary M30 inline-six. Luxurious, powerful, and infinitely stylish.', image:'https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/da4b9237bacccdf19c0760cab7aec4a8359010b0/photos/3vYENpNM.7aaJHBwbu.jpg', brand:'bmw' },
+        { id:5, year:1991, make:'Mercedes-Benz', model:'500SL', price:32000, engine:'5.0L M119 V8', power:'322 hp', torque:'332 lb-ft', topSpeed:'155 mph', acceleration:'6.1 sec', transmission:'4-speed Automatic', mileage:'72,000', color:'Arctic White', description:'The R129 Mercedes 500SL represents German engineering at its finest. With a vault-like build quality, automatic roll bar, and the silky M119 V8, this SL delivers a refined yet powerful driving experience that defined 1990s luxury.', image:'https://www.legendcarcompany.com/galleria_images/929/929_main_l.jpg', brand:'mercedes' },
+        { id:6, year:1988, make:'Porsche', model:'911 Carrera', price:49500, engine:'3.2L Flat-6', power:'231 hp', torque:'209 lb-ft', topSpeed:'152 mph', acceleration:'5.7 sec', transmission:'G50 5-speed', mileage:'95,000', color:'Guards Red', description:'The 1988 Porsche 911 Carrera is the ultimate evolution of the classic air-cooled 911. With the robust G50 transmission and legendary 3.2L flat-six, this Carrera delivers the pure, analog driving experience that Porsche purists crave.', image:'https://collectingcars.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb0lCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--71e0b2b4d55e5d7b1f4c9e7b7f2c9d9d9d9d9d9d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemIzc3hjR1J5WVhSb1NXNW1iM0o2TUdGMWRHOXphWHB2WTNCT2IzVmpaWE5sY1dGdWJHeGxld1k2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--f1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c/1988-porsche-911-carrera-3-2-super-sport-targa.jpg', brand:'porsche' },
+        { id:7, year:1994, make:'Jaguar', model:'XJS', price:19900, engine:'4.0L AJ6 I6', power:'223 hp', torque:'278 lb-ft', topSpeed:'143 mph', acceleration:'7.8 sec', transmission:'4-speed Automatic', mileage:'65,000', color:'British Racing Green', description:'The Jaguar XJS is a grand tourer with unmistakable British character. The 4.0L AJ6 engine provides silky power while the luxurious interior wraps you in Connolly leather and burl walnut. A true gentleman\'s express.', image:'https://photos.autohunter.com/assets/media/5035ad99-108d-42c5-beb5-7e1e60e77568_largesize.jpg', brand:'jaguar' },
+        { id:8, year:1990, make:'Lexus', model:'LS400', price:15000, engine:'4.0L 1UZ-FE V8', power:'250 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'7.9 sec', transmission:'4-speed Automatic', mileage:'110,000', color:'Pearl White', description:'The LS400 is the car that changed everything. Toyota\'s relentless pursuit of perfection created a luxury sedan that rivaled the best from Germany, with legendary reliability and vault-like silence. A milestone in automotive history.', image:'https://ksportusa.com/wp-content/uploads/2020/03/Lexus-LS400-Suspension.jpg', brand:'lexus' },
+        { id:9, year:1995, make:'Land Rover', model:'Range Rover Classic', price:38500, engine:'4.2L V8', power:'200 hp', torque:'251 lb-ft', topSpeed:'110 mph', acceleration:'10.5 sec', transmission:'4-speed Automatic', mileage:'78,000', color:'Beluga Black', description:'The Range Rover Classic is the original luxury SUV. Combining British refinement with genuine off-road capability, this 1995 example represents the final evolution of the iconic design. Equally at home on Rodeo Drive or the Serengeti.', image:'https://ecdautodesign.com/wp-content/uploads/2020/01/Range-Rover-Classic-Off-Roading.jpg', brand:'range-rover' },
+        { id:10, year:1987, make:'BMW', model:'M3 E30', price:89500, engine:'2.3L S14 I4', power:'192 hp', torque:'170 lb-ft', topSpeed:'146 mph', acceleration:'6.7 sec', transmission:'5-speed Manual', mileage:'68,000', color:'Henna Red', description:'The E30 M3 is motorsport royalty. Homologated for Group A racing, its box-flared arches and high-revving S14 engine make it the most successful touring car of all time. This is the definitive driver\'s car that defined a generation.', image:'https://images.pistonheads.com/nimg/45487/DSC_9103.jpg', brand:'bmw' },
+        { id:11, year:1961, make:'Jaguar', model:'E-Type Series 1', price:185000, engine:'3.8L XK I6', power:'265 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'6.9 sec', transmission:'4-speed Manual', mileage:'52,000', color:'Opalescent Bronze', description:'Enzo Ferrari called it "the most beautiful car ever made." The Series 1 E-Type with its covered headlights and 3.8L XK engine is the purest expression of Jaguar\'s design genius. A true investment-grade masterpiece.', image:'https://images.postwarclassic.com/pics/r2w-1200x800-caradverts/485177/r-1961_Jaguar_E-Type_SI_38L_Roadster_12_ywoulw.jpg', brand:'jaguar' }
+    ];
+
+    const featuredCarsDiv = document.getElementById('featuredCars');
+    const galleryGrid = document.getElementById('galleryGrid');
+    const modal = document.getElementById('carModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    // Render Featured Cars (first 3)
+    function renderFeatured() {
+        featuredCarsDiv.innerHTML = '';
+        cars.slice(0, 3).forEach(car => {
+            featuredCarsDiv.appendChild(createCarCard(car));
+        });
+    }
+    
+    function createCarCard(car) {
+        const div = document.createElement('div');
+        div.className = 'car-card';
+        div.innerHTML = `
+            <div class="car-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
+            <div class="car-info">
+                <h3>${car.year} ${car.make}</h3>
+                <p class="car-model">${car.model}</p>
+                <p class="car-specs">${car.color} • ${car.mileage} mi • ${car.engine}</p>
+                <p class="car-price">$${car.price.toLocaleString()}</p>
+                <p class="click-hint-small">Click for details →</p>
+            </div>
+        `;
+        div.addEventListener('click', () => openModal(car));
+        return div;
+    }
+    
+    function createGalleryItem(car) {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.innerHTML = `
+            <div class="gallery-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
+            <div class="gallery-info">
+                <h4>${car.year} ${car.make} ${car.model}</h4>
+                <p class="gallery-price">$${car.price.toLocaleString()}</p>
+                <p class="click-hint">Click for details →</p>
+            </div>
+        `;
+        div.addEventListener('click', () => openModal(car));
+        return div;
+    }
+    
+    function openModal(car) {
+        modalContent.innerHTML = `
+            <div class="modal-header">
+                <div class="modal-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
+                <div class="modal-title">
+                    <h3>${car.year} ${car.make} ${car.model}</h3>
+                    <div class="modal-price">$${car.price.toLocaleString()}</div>
+                    <div class="modal-year">${car.color} • ${car.mileage} miles</div>
+                </div>
+            </div>
+            <div class="modal-details">
+                <div class="detail-item"><span class="detail-label">Engine</span><span class="detail-value">${car.engine}</span></div>
+                <div class="detail-item"><span class="detail-label">Horsepower</span><span class="detail-value">${car.power}</span></div>
+                <div class="detail-item"><span class="detail-label">Torque</span><span class="detail-value">${car.torque}</span></div>
+                <div class="detail-item"><span class="detail-label">Top Speed</span><span class="detail-value">${car.topSpeed}</span></div>
+                <div class="detail-item"><span class="detail-label">0-60 mph</span><span class="detail-value">${car.acceleration}</span></div>
+                <div class="detail-item"><span class="detail-label">Transmission</span><span class="detail-value">${car.transmission}</span></div>
+            </div>
+            <div class="modal-description">${car.description}</div>
+            <div class="modal-contact">
+                <a href="#" class="cta-btn" onclick="alert('📞 Call +254 716 822 856 to schedule a viewing of the ${car.year} ${car.make} ${car.model}')">INQUIRE ABOUT THIS VEHICLE</a>
+            </div>
+        `;
+        modal.classList.add('active');
+    }
+    
+    function renderGallery(filter = 'all') {
+        galleryGrid.innerHTML = '';
+        const filtered = filter === 'all' ? cars : cars.filter(c => c.brand === filter);
+        filtered.forEach(car => galleryGrid.appendChild(createGalleryItem(car)));
+    }
+    
     // Navigation
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -832,51 +885,6 @@
         });
     });
     
-    // Gallery Data with Ferrari image
-    const galleryItems = [
-        { name: 'Ferrari F355 Spider', year: '1977', brand: 'ferrari', category: 'european', price: '$89,000', image: 'https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg', icon: '', ref: 'MPM Cars' },
-        { name: 'Chevrolet Impala', year: '1960', brand: 'chevrolet', category: 'american', price: '$45,000', image: '', icon: '🚗', ref: '24957bbf...jpg' },
-        { name: 'Chevrolet Chevelle SS', year: '1970', brand: 'chevrolet', category: 'american', price: '$72,500', image: '', icon: '🏁', ref: '12de8c45...jpg' },
-        { name: 'BMW 635CSi', year: '1989', brand: 'bmw', category: 'european', price: '$28,500', image: '', icon: '🇩🇪', ref: '' },
-        { name: 'Mercedes 500SL', year: '1991', brand: 'mercedes', category: 'european', price: '$32,000', image: '', icon: '✨', ref: '' },
-        { name: 'Porsche 911', year: '1988', brand: 'porsche', category: 'european', price: '$49,500', image: '', icon: '🏁', ref: '' },
-        { name: 'Jaguar XJS', year: '1994', brand: 'jaguar', category: 'european', price: '$19,900', image: '', icon: '🐆', ref: '' },
-        { name: 'Lexus LS400', year: '1990', brand: 'lexus', category: 'japanese', price: '$15,000', image: '', icon: '👑', ref: '' }
-    ];
-    
-    const grid = document.getElementById('galleryGrid');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    
-    function renderGallery(filter = 'all') {
-        grid.innerHTML = '';
-        const filtered = filter === 'all' ? galleryItems : galleryItems.filter(i => i.brand === filter || i.category === filter);
-        
-        filtered.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'gallery-item';
-            
-            const imageContent = item.image 
-                ? `<img src="${item.image}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">`
-                : `<span class="placeholder-icon">${item.icon}</span>`;
-            
-            div.innerHTML = `
-                <div class="gallery-image">
-                    ${imageContent}
-                </div>
-                <div class="gallery-info">
-                    <h4>${item.year} ${item.name}</h4>
-                    <p class="gallery-price">${item.price}</p>
-                    ${item.ref ? `<p class="image-ref-gallery">📸 ${item.ref}</p>` : ''}
-                    <p class="click-hint">Click for details →</p>
-                </div>
-            `;
-            div.addEventListener('click', () => {
-                alert(`${item.year} ${item.name}\n${item.price}\n\n📞 +254 716 822 856\n📍 Westlands, near GTC`);
-            });
-            grid.appendChild(div);
-        });
-    }
-    
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -885,8 +893,12 @@
         });
     });
     
+    closeModal.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+    
+    // Initialize
+    renderFeatured();
     renderGallery();
 </script>
-
 </body>
 </html>
