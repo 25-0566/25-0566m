@@ -27,7 +27,7 @@
             line-height: 1.5;
         }
 
-        /* ========== NAVIGATION - Refined ========== */
+        /* ========== NAVIGATION ========== */
         .nav-bar {
             background: #0a0a0a;
             padding: 15px 40px;
@@ -103,7 +103,7 @@
             to { opacity: 1; }
         }
 
-        /* ========== HERO - Minimal ========== */
+        /* ========== HERO ========== */
         .hero {
             text-align: center;
             padding: 60px 30px;
@@ -139,7 +139,7 @@
             letter-spacing: 2px;
         }
 
-        /* ========== BUTTONS - Understated ========== */
+        /* ========== BUTTONS ========== */
         .cta-btn {
             display: inline-block;
             padding: 10px 30px;
@@ -180,7 +180,7 @@
             letter-spacing: 3px;
         }
 
-        /* ========== CAR CARDS - Clean ========== */
+        /* ========== CAR CARDS - With Proper Image Sizing ========== */
         .car-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -201,12 +201,24 @@
         }
 
         .car-image {
-            height: 200px;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
             border-bottom: 1px solid #d4af3720;
+        }
+
+        .car-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .car-image .placeholder-icon {
+            font-size: 2.5rem;
         }
 
         .car-info {
@@ -251,7 +263,7 @@
             text-transform: uppercase;
         }
 
-        /* ========== SPECIAL OFFER - Subtle ========== */
+        /* ========== SPECIAL OFFER ========== */
         .special-offer {
             background: #0f0f0f;
             border: 1px solid #d4af3720;
@@ -466,12 +478,24 @@
         }
 
         .gallery-image {
-            height: 160px;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
             border-bottom: 1px solid #d4af3720;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-image .placeholder-icon {
+            font-size: 2rem;
         }
 
         .gallery-info {
@@ -634,24 +658,24 @@
         <h2 class="section-title">FEATURED <span>Collection</span></h2>
         
         <div class="car-grid">
-            <!-- Ferrari -->
+            <!-- Ferrari F355 Spider - WITH REAL IMAGE -->
             <div class="car-card">
-                <div class="car-image" style="background: linear-gradient(145deg, #1a0a0a, #0a0505);">
-                    🏎️
+                <div class="car-image">
+                    <img src="https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg" alt="1977 Ferrari F355 Spider">
                 </div>
                 <div class="car-info">
                     <h3>1977 Ferrari</h3>
                     <p class="car-model">F355 Spider</p>
                     <p class="car-specs">Rosso Corsa • 42k mi • V8</p>
                     <p class="car-price">$89,000</p>
-                    <p class="image-ref">8b646ff1b12dfdbf6895e59569d44cec.jpg</p>
+                    <p class="image-ref">📸 MPM Cars Collection</p>
                 </div>
             </div>
             
-            <!-- Impala -->
+            <!-- Chevrolet Impala -->
             <div class="car-card">
-                <div class="car-image" style="background: linear-gradient(145deg, #0a1220, #050810);">
-                    🚗
+                <div class="car-image">
+                    <span class="placeholder-icon">🚗</span>
                 </div>
                 <div class="car-info">
                     <h3>1960 Chevrolet</h3>
@@ -662,10 +686,10 @@
                 </div>
             </div>
             
-            <!-- Chevelle -->
+            <!-- Chevrolet Chevelle -->
             <div class="car-card">
-                <div class="car-image" style="background: linear-gradient(145deg, #151515, #080808);">
-                    🏁
+                <div class="car-image">
+                    <span class="placeholder-icon">🏁</span>
                 </div>
                 <div class="car-info">
                     <h3>1970 Chevrolet</h3>
@@ -808,16 +832,16 @@
         });
     });
     
-    // Gallery Data
+    // Gallery Data with Ferrari image
     const galleryItems = [
-        { name: 'Ferrari F355 Spider', year: '1977', brand: 'ferrari', category: 'european', price: '$89,000', color: '#1a0a0a', icon: '🏎️', ref: '8b646ff1...jpg' },
-        { name: 'Chevrolet Impala', year: '1960', brand: 'chevrolet', category: 'american', price: '$45,000', color: '#0a1220', icon: '🚗', ref: '24957bbf...jpg' },
-        { name: 'Chevrolet Chevelle SS', year: '1970', brand: 'chevrolet', category: 'american', price: '$72,500', color: '#151515', icon: '🏁', ref: '12de8c45...jpg' },
-        { name: 'BMW 635CSi', year: '1989', brand: 'bmw', category: 'european', price: '$28,500', color: '#1a1510', icon: '🇩🇪', ref: '' },
-        { name: 'Mercedes 500SL', year: '1991', brand: 'mercedes', category: 'european', price: '$32,000', color: '#151515', icon: '✨', ref: '' },
-        { name: 'Porsche 911', year: '1988', brand: 'porsche', category: 'european', price: '$49,500', color: '#1a0505', icon: '🏁', ref: '' },
-        { name: 'Jaguar XJS', year: '1994', brand: 'jaguar', category: 'european', price: '$19,900', color: '#051008', icon: '🐆', ref: '' },
-        { name: 'Lexus LS400', year: '1990', brand: 'lexus', category: 'japanese', price: '$15,000', color: '#101010', icon: '👑', ref: '' }
+        { name: 'Ferrari F355 Spider', year: '1977', brand: 'ferrari', category: 'european', price: '$89,000', image: 'https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg', icon: '', ref: 'MPM Cars' },
+        { name: 'Chevrolet Impala', year: '1960', brand: 'chevrolet', category: 'american', price: '$45,000', image: '', icon: '🚗', ref: '24957bbf...jpg' },
+        { name: 'Chevrolet Chevelle SS', year: '1970', brand: 'chevrolet', category: 'american', price: '$72,500', image: '', icon: '🏁', ref: '12de8c45...jpg' },
+        { name: 'BMW 635CSi', year: '1989', brand: 'bmw', category: 'european', price: '$28,500', image: '', icon: '🇩🇪', ref: '' },
+        { name: 'Mercedes 500SL', year: '1991', brand: 'mercedes', category: 'european', price: '$32,000', image: '', icon: '✨', ref: '' },
+        { name: 'Porsche 911', year: '1988', brand: 'porsche', category: 'european', price: '$49,500', image: '', icon: '🏁', ref: '' },
+        { name: 'Jaguar XJS', year: '1994', brand: 'jaguar', category: 'european', price: '$19,900', image: '', icon: '🐆', ref: '' },
+        { name: 'Lexus LS400', year: '1990', brand: 'lexus', category: 'japanese', price: '$15,000', image: '', icon: '👑', ref: '' }
     ];
     
     const grid = document.getElementById('galleryGrid');
@@ -830,14 +854,19 @@
         filtered.forEach(item => {
             const div = document.createElement('div');
             div.className = 'gallery-item';
+            
+            const imageContent = item.image 
+                ? `<img src="${item.image}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">`
+                : `<span class="placeholder-icon">${item.icon}</span>`;
+            
             div.innerHTML = `
-                <div class="gallery-image" style="background: ${item.color};">
-                    <span>${item.icon}</span>
+                <div class="gallery-image">
+                    ${imageContent}
                 </div>
                 <div class="gallery-info">
                     <h4>${item.year} ${item.name}</h4>
                     <p class="gallery-price">${item.price}</p>
-                    ${item.ref ? `<p class="image-ref-gallery">${item.ref}</p>` : ''}
+                    ${item.ref ? `<p class="image-ref-gallery">📸 ${item.ref}</p>` : ''}
                     <p class="click-hint">Click for details →</p>
                 </div>
             `;
