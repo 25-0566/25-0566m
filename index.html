@@ -203,10 +203,6 @@
             display: block;
         }
 
-        .car-image .placeholder-icon {
-            font-size: 2.5rem;
-        }
-
         .car-info {
             padding: 20px;
             text-align: left;
@@ -247,6 +243,57 @@
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Video Section */
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .video-card {
+            background: #0f0f0f;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+        }
+
+        .video-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #d4af3720;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-header .video-icon {
+            color: #d4af37;
+            font-size: 1.2rem;
+        }
+
+        .video-header h4 {
+            color: #d4af37;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* Special Offer */
@@ -461,8 +508,6 @@
             display: block;
         }
 
-        .gallery-image .placeholder-icon { font-size: 2rem; }
-
         .gallery-info {
             padding: 15px;
         }
@@ -488,6 +533,17 @@
             letter-spacing: 1px;
         }
 
+        .video-badge {
+            display: inline-block;
+            background: #d4af3720;
+            color: #d4af37;
+            font-size: 0.6rem;
+            padding: 3px 8px;
+            border-radius: 2px;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+
         /* Modal */
         .modal-overlay {
             position: fixed;
@@ -510,7 +566,7 @@
 
         .modal-card {
             background: #0f0f0f;
-            max-width: 700px;
+            max-width: 750px;
             width: 100%;
             border-radius: 4px;
             border: 1px solid #d4af37;
@@ -604,6 +660,16 @@
             margin-bottom: 25px;
         }
 
+        .modal-video {
+            margin: 20px 0;
+        }
+
+        .modal-video .video-wrapper {
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #d4af3720;
+        }
+
         .modal-contact {
             text-align: center;
             padding-top: 15px;
@@ -643,6 +709,7 @@
         /* Responsive */
         @media (max-width: 1000px) {
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .video-section { grid-template-columns: 1fr; }
         }
         @media (max-width: 900px) {
             .nav-bar { flex-direction: column; gap: 12px; padding: 15px 20px; }
@@ -694,6 +761,29 @@
         <h2 class="section-title">FEATURED <span>Collection</span></h2>
         
         <div class="car-grid" id="featuredCars"></div>
+        
+        <!-- Video Showcase Section -->
+        <h2 class="section-title">VIDEO <span>Showcase</span></h2>
+        <div class="video-section">
+            <div class="video-card">
+                <div class="video-header">
+                    <span class="video-icon">🎬</span>
+                    <h4>1977 Ferrari F355 Spider</h4>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/xYVIn05Qk4A" title="Ferrari F355 Spider" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-header">
+                    <span class="video-icon">🎬</span>
+                    <h4>1987 BMW M3 E30</h4>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Jnajan91iHI" title="BMW M3 E30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
         
         <div class="special-offer">
             <h3>THE INNER CIRCLE</h3>
@@ -772,19 +862,19 @@
 </footer>
 
 <script>
-    // Complete Car Database with specs
+    // Complete Car Database with specs and videos
     const cars = [
-        { id:1, year:1977, make:'Ferrari', model:'F355 Spider', price:89000, engine:'3.5L V8', power:'375 hp', torque:'268 lb-ft', topSpeed:'183 mph', acceleration:'4.7 sec', transmission:'6-speed Manual', mileage:'42,000', color:'Rosso Corsa', description:'The Ferrari F355 Spider represents the pinnacle of 1990s Italian engineering. With its iconic Pininfarina design and the legendary 3.5L V8 that sings to 8,500 RPM, this Spider offers an open-air experience like no other. A true collector\'s piece that combines raw emotion with Ferrari heritage.', image:'https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg', brand:'ferrari' },
-        { id:2, year:1960, make:'Chevrolet', model:'Impala 2-Door', price:45000, engine:'283 V8', power:'230 hp', torque:'300 lb-ft', topSpeed:'115 mph', acceleration:'9.5 sec', transmission:'2-speed Powerglide', mileage:'58,000', color:'Glacier Blue', description:'The 1960 Chevrolet Impala is the definition of American cruising. With its iconic triple tail lights and spacious interior, this 2-door hardtop represents the height of 1960s style. The 283 V8 provides smooth, reliable power perfect for weekend drives and car shows.', image:'https://fleesphotos.com/wp-content/uploads/2020/01/1960-chevy-impala-hard-top-2-flees-photos-1024x682.jpg', brand:'chevrolet' },
-        { id:3, year:1970, make:'Chevrolet', model:'Chevelle SS', price:72500, engine:'454 LS6 V8', power:'450 hp', torque:'500 lb-ft', topSpeed:'130 mph', acceleration:'5.8 sec', transmission:'4-speed Manual', mileage:'62,000', color:'Tuxedo Black', description:'The 1970 Chevelle SS with the legendary LS6 454 is one of the most feared muscle cars of all time. With 450 horsepower on tap, this numbers-matching example delivers brutal acceleration and an exhaust note that demands respect. A true American icon.', image:'https://images.mecum.com/image/upload/c_fill,f_auto,g_center,q_auto,w_1600,h_899/v1713876869/auctions/SC24/1118254/598166.jpg', brand:'chevrolet' },
-        { id:4, year:1989, make:'BMW', model:'635CSi', price:28500, engine:'3.5L M30 I6', power:'208 hp', torque:'225 lb-ft', topSpeed:'140 mph', acceleration:'7.5 sec', transmission:'5-speed Manual', mileage:'89,000', color:'Bronzit Beige', description:'The BMW 635CSi is the ultimate grand tourer of the 1980s. Designed by Paul Bracq, the E24 chassis offers timeless shark-nose styling combined with BMW\'s legendary M30 inline-six. Luxurious, powerful, and infinitely stylish.', image:'https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/da4b9237bacccdf19c0760cab7aec4a8359010b0/photos/3vYENpNM.7aaJHBwbu.jpg', brand:'bmw' },
-        { id:5, year:1991, make:'Mercedes-Benz', model:'500SL', price:32000, engine:'5.0L M119 V8', power:'322 hp', torque:'332 lb-ft', topSpeed:'155 mph', acceleration:'6.1 sec', transmission:'4-speed Automatic', mileage:'72,000', color:'Arctic White', description:'The R129 Mercedes 500SL represents German engineering at its finest. With a vault-like build quality, automatic roll bar, and the silky M119 V8, this SL delivers a refined yet powerful driving experience that defined 1990s luxury.', image:'https://www.legendcarcompany.com/galleria_images/929/929_main_l.jpg', brand:'mercedes' },
-        { id:6, year:1988, make:'Porsche', model:'911 Carrera', price:49500, engine:'3.2L Flat-6', power:'231 hp', torque:'209 lb-ft', topSpeed:'152 mph', acceleration:'5.7 sec', transmission:'G50 5-speed', mileage:'95,000', color:'Guards Red', description:'The 1988 Porsche 911 Carrera is the ultimate evolution of the classic air-cooled 911. With the robust G50 transmission and legendary 3.2L flat-six, this Carrera delivers the pure, analog driving experience that Porsche purists crave.', image:'https://collectingcars.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb0lCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--71e0b2b4d55e5d7b1f4c9e7b7f2c9d9d9d9d9d9d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VY21WemIzc3hjR1J5WVhSb1NXNW1iM0o2TUdGMWRHOXphWHB2WTNCT2IzVmpaWE5sY1dGdWJHeGxld1k2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--f1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c1d1c/1988-porsche-911-carrera-3-2-super-sport-targa.jpg', brand:'porsche' },
-        { id:7, year:1994, make:'Jaguar', model:'XJS', price:19900, engine:'4.0L AJ6 I6', power:'223 hp', torque:'278 lb-ft', topSpeed:'143 mph', acceleration:'7.8 sec', transmission:'4-speed Automatic', mileage:'65,000', color:'British Racing Green', description:'The Jaguar XJS is a grand tourer with unmistakable British character. The 4.0L AJ6 engine provides silky power while the luxurious interior wraps you in Connolly leather and burl walnut. A true gentleman\'s express.', image:'https://photos.autohunter.com/assets/media/5035ad99-108d-42c5-beb5-7e1e60e77568_largesize.jpg', brand:'jaguar' },
-        { id:8, year:1990, make:'Lexus', model:'LS400', price:15000, engine:'4.0L 1UZ-FE V8', power:'250 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'7.9 sec', transmission:'4-speed Automatic', mileage:'110,000', color:'Pearl White', description:'The LS400 is the car that changed everything. Toyota\'s relentless pursuit of perfection created a luxury sedan that rivaled the best from Germany, with legendary reliability and vault-like silence. A milestone in automotive history.', image:'https://ksportusa.com/wp-content/uploads/2020/03/Lexus-LS400-Suspension.jpg', brand:'lexus' },
-        { id:9, year:1995, make:'Land Rover', model:'Range Rover Classic', price:38500, engine:'4.2L V8', power:'200 hp', torque:'251 lb-ft', topSpeed:'110 mph', acceleration:'10.5 sec', transmission:'4-speed Automatic', mileage:'78,000', color:'Beluga Black', description:'The Range Rover Classic is the original luxury SUV. Combining British refinement with genuine off-road capability, this 1995 example represents the final evolution of the iconic design. Equally at home on Rodeo Drive or the Serengeti.', image:'https://ecdautodesign.com/wp-content/uploads/2020/01/Range-Rover-Classic-Off-Roading.jpg', brand:'range-rover' },
-        { id:10, year:1987, make:'BMW', model:'M3 E30', price:89500, engine:'2.3L S14 I4', power:'192 hp', torque:'170 lb-ft', topSpeed:'146 mph', acceleration:'6.7 sec', transmission:'5-speed Manual', mileage:'68,000', color:'Henna Red', description:'The E30 M3 is motorsport royalty. Homologated for Group A racing, its box-flared arches and high-revving S14 engine make it the most successful touring car of all time. This is the definitive driver\'s car that defined a generation.', image:'https://images.pistonheads.com/nimg/45487/DSC_9103.jpg', brand:'bmw' },
-        { id:11, year:1961, make:'Jaguar', model:'E-Type Series 1', price:185000, engine:'3.8L XK I6', power:'265 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'6.9 sec', transmission:'4-speed Manual', mileage:'52,000', color:'Opalescent Bronze', description:'Enzo Ferrari called it "the most beautiful car ever made." The Series 1 E-Type with its covered headlights and 3.8L XK engine is the purest expression of Jaguar\'s design genius. A true investment-grade masterpiece.', image:'https://images.postwarclassic.com/pics/r2w-1200x800-caradverts/485177/r-1961_Jaguar_E-Type_SI_38L_Roadster_12_ywoulw.jpg', brand:'jaguar' }
+        { id:1, year:1977, make:'Ferrari', model:'F355 Spider', price:89000, engine:'3.5L V8', power:'375 hp', torque:'268 lb-ft', topSpeed:'183 mph', acceleration:'4.7 sec', transmission:'6-speed Manual', mileage:'42,000', color:'Rosso Corsa', description:'The Ferrari F355 Spider represents the pinnacle of 1990s Italian engineering. With its iconic Pininfarina design and the legendary 3.5L V8 that sings to 8,500 RPM, this Spider offers an open-air experience like no other. A true collector\'s piece that combines raw emotion with Ferrari heritage.', image:'https://mpmcars.com/wp-content/uploads/2022/10/MPM-Cars-1997-Ferrari-F355-Spider-1024x682.jpg', brand:'ferrari', video:'xYVIn05Qk4A' },
+        { id:2, year:1960, make:'Chevrolet', model:'Impala 2-Door', price:45000, engine:'283 V8', power:'230 hp', torque:'300 lb-ft', topSpeed:'115 mph', acceleration:'9.5 sec', transmission:'2-speed Powerglide', mileage:'58,000', color:'Glacier Blue', description:'The 1960 Chevrolet Impala is the definition of American cruising. With its iconic triple tail lights and spacious interior, this 2-door hardtop represents the height of 1960s style. The 283 V8 provides smooth, reliable power perfect for weekend drives and car shows.', image:'https://images.classic.com/vehicles/a22885b08b08daca789723132f828a33.jpeg?w=1200&h=676&fit=crop', brand:'chevrolet', video:'' },
+        { id:3, year:1970, make:'Chevrolet', model:'Chevelle SS', price:72500, engine:'454 LS6 V8', power:'450 hp', torque:'500 lb-ft', topSpeed:'130 mph', acceleration:'5.8 sec', transmission:'4-speed Manual', mileage:'62,000', color:'Tuxedo Black', description:'The 1970 Chevelle SS with the legendary LS6 454 is one of the most feared muscle cars of all time. With 450 horsepower on tap, this numbers-matching example delivers brutal acceleration and an exhaust note that demands respect. A true American icon.', image:'https://images.mecum.com/image/upload/c_fill,f_auto,g_center,q_auto,w_1600,h_899/v1713876869/auctions/SC24/1118254/598166.jpg', brand:'chevrolet', video:'' },
+        { id:4, year:1989, make:'BMW', model:'635CSi', price:28500, engine:'3.5L M30 I6', power:'208 hp', torque:'225 lb-ft', topSpeed:'140 mph', acceleration:'7.5 sec', transmission:'5-speed Manual', mileage:'89,000', color:'Bronzit Beige', description:'The BMW 635CSi is the ultimate grand tourer of the 1980s. Designed by Paul Bracq, the E24 chassis offers timeless shark-nose styling combined with BMW\'s legendary M30 inline-six. Luxurious, powerful, and infinitely stylish.', image:'https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/da4b9237bacccdf19c0760cab7aec4a8359010b0/photos/3vYENpNM.7aaJHBwbu.jpg', brand:'bmw', video:'' },
+        { id:5, year:1991, make:'Mercedes-Benz', model:'500SL', price:32000, engine:'5.0L M119 V8', power:'322 hp', torque:'332 lb-ft', topSpeed:'155 mph', acceleration:'6.1 sec', transmission:'4-speed Automatic', mileage:'72,000', color:'Arctic White', description:'The R129 Mercedes 500SL represents German engineering at its finest. With a vault-like build quality, automatic roll bar, and the silky M119 V8, this SL delivers a refined yet powerful driving experience that defined 1990s luxury.', image:'https://www.legendcarcompany.com/galleria_images/929/929_main_l.jpg', brand:'mercedes', video:'' },
+        { id:6, year:1988, make:'Porsche', model:'911 Turbo Targa', price:49500, engine:'3.3L Turbo Flat-6', power:'282 hp', torque:'278 lb-ft', topSpeed:'160 mph', acceleration:'5.2 sec', transmission:'5-speed Manual', mileage:'85,000', color:'Guards Red', description:'The 1988 Porsche 911 Turbo Targa combines open-air freedom with turbocharged performance. The iconic wide-body design and whale-tail spoiler make this one of the most recognizable 911s ever built. A true collector\'s Porsche.', image:'https://collectorscarworld.com/wp-content/uploads/2024/09/P1.jpeg', brand:'porsche', video:'' },
+        { id:7, year:1994, make:'Jaguar', model:'XJS', price:19900, engine:'4.0L AJ6 I6', power:'223 hp', torque:'278 lb-ft', topSpeed:'143 mph', acceleration:'7.8 sec', transmission:'4-speed Automatic', mileage:'65,000', color:'British Racing Green', description:'The Jaguar XJS is a grand tourer with unmistakable British character. The 4.0L AJ6 engine provides silky power while the luxurious interior wraps you in Connolly leather and burl walnut. A true gentleman\'s express.', image:'https://photos.autohunter.com/assets/media/5035ad99-108d-42c5-beb5-7e1e60e77568_largesize.jpg', brand:'jaguar', video:'' },
+        { id:8, year:1990, make:'Lexus', model:'LS400', price:15000, engine:'4.0L 1UZ-FE V8', power:'250 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'7.9 sec', transmission:'4-speed Automatic', mileage:'110,000', color:'Pearl White', description:'The LS400 is the car that changed everything. Toyota\'s relentless pursuit of perfection created a luxury sedan that rivaled the best from Germany, with legendary reliability and vault-like silence. A milestone in automotive history.', image:'https://ksportusa.com/wp-content/uploads/2020/03/Lexus-LS400-Suspension.jpg', brand:'lexus', video:'' },
+        { id:9, year:1995, make:'Land Rover', model:'Range Rover Classic', price:38500, engine:'4.2L V8', power:'200 hp', torque:'251 lb-ft', topSpeed:'110 mph', acceleration:'10.5 sec', transmission:'4-speed Automatic', mileage:'78,000', color:'Beluga Black', description:'The Range Rover Classic is the original luxury SUV. Combining British refinement with genuine off-road capability, this 1995 example represents the final evolution of the iconic design. Equally at home on Rodeo Drive or the Serengeti.', image:'https://cdn.motor1.com/images/mgl/nA9xPx/s3/land-rover-range-rover-project-oliver-plaid.webp', brand:'range-rover', video:'' },
+        { id:10, year:1987, make:'BMW', model:'M3 E30', price:89500, engine:'2.3L S14 I4', power:'192 hp', torque:'170 lb-ft', topSpeed:'146 mph', acceleration:'6.7 sec', transmission:'5-speed Manual', mileage:'68,000', color:'Henna Red', description:'The E30 M3 is motorsport royalty. Homologated for Group A racing, its box-flared arches and high-revving S14 engine make it the most successful touring car of all time. This is the definitive driver\'s car that defined a generation.', image:'https://images.pistonheads.com/nimg/45487/DSC_9103.jpg', brand:'bmw', video:'Jnajan91iHI' },
+        { id:11, year:1961, make:'Jaguar', model:'E-Type Series 1', price:185000, engine:'3.8L XK I6', power:'265 hp', torque:'260 lb-ft', topSpeed:'150 mph', acceleration:'6.9 sec', transmission:'4-speed Manual', mileage:'52,000', color:'Opalescent Bronze', description:'Enzo Ferrari called it "the most beautiful car ever made." The Series 1 E-Type with its covered headlights and 3.8L XK engine is the purest expression of Jaguar\'s design genius. A true investment-grade masterpiece.', image:'https://images.postwarclassic.com/pics/r2w-1200x800-caradverts/485177/r-1961_Jaguar_E-Type_SI_38L_Roadster_12_ywoulw.jpg', brand:'jaguar', video:'' }
     ];
 
     const featuredCarsDiv = document.getElementById('featuredCars');
@@ -809,7 +899,7 @@
             <div class="car-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
             <div class="car-info">
                 <h3>${car.year} ${car.make}</h3>
-                <p class="car-model">${car.model}</p>
+                <p class="car-model">${car.model} ${car.video ? '<span class="video-badge">📹 VIDEO</span>' : ''}</p>
                 <p class="car-specs">${car.color} • ${car.mileage} mi • ${car.engine}</p>
                 <p class="car-price">$${car.price.toLocaleString()}</p>
                 <p class="click-hint-small">Click for details →</p>
@@ -825,7 +915,7 @@
         div.innerHTML = `
             <div class="gallery-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
             <div class="gallery-info">
-                <h4>${car.year} ${car.make} ${car.model}</h4>
+                <h4>${car.year} ${car.make} ${car.model} ${car.video ? '<span class="video-badge">📹</span>' : ''}</h4>
                 <p class="gallery-price">$${car.price.toLocaleString()}</p>
                 <p class="click-hint">Click for details →</p>
             </div>
@@ -835,6 +925,14 @@
     }
     
     function openModal(car) {
+        const videoSection = car.video ? `
+            <div class="modal-video">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/${car.video}" title="${car.make} ${car.model}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        ` : '';
+        
         modalContent.innerHTML = `
             <div class="modal-header">
                 <div class="modal-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
@@ -853,6 +951,7 @@
                 <div class="detail-item"><span class="detail-label">Transmission</span><span class="detail-value">${car.transmission}</span></div>
             </div>
             <div class="modal-description">${car.description}</div>
+            ${videoSection}
             <div class="modal-contact">
                 <a href="#" class="cta-btn" onclick="alert('📞 Call +254 716 822 856 to schedule a viewing of the ${car.year} ${car.make} ${car.model}')">INQUIRE ABOUT THIS VEHICLE</a>
             </div>
