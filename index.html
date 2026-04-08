@@ -56,14 +56,14 @@
 
         .nav-menu {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
         }
 
         .nav-menu li a {
             color: #c0b8a8;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 400;
             letter-spacing: 3px;
             padding: 5px 0;
@@ -442,6 +442,91 @@
         .value-item h4 { color: #d4af37; font-size: 0.95rem; margin-bottom: 6px; font-weight: 400; letter-spacing: 2px; }
         .value-item p { color: #908878; font-size: 0.8rem; }
 
+        /* ========== HERITAGE PAGE ========== */
+        .heritage-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .era-card {
+            background: #0f0f0f;
+            border-radius: 4px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid #2a2a2a;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .era-card:hover {
+            border-color: #d4af3740;
+        }
+
+        .era-year {
+            text-align: center;
+        }
+
+        .era-year .year {
+            font-size: 2.5rem;
+            color: #d4af37;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .era-year .era-name {
+            font-size: 0.8rem;
+            color: #a89060;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        .era-content h3 {
+            font-size: 1.5rem;
+            color: #e0dcd5;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .era-content p {
+            color: #a09888;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .era-icon {
+            font-size: 2rem;
+            margin-top: 10px;
+            opacity: 0.5;
+        }
+
+        .heritage-quote {
+            text-align: center;
+            padding: 40px;
+            background: #0f0f0f;
+            border-radius: 4px;
+            border: 1px solid #d4af3720;
+            margin-top: 40px;
+        }
+
+        .heritage-quote p {
+            font-size: 1.3rem;
+            color: #d4af37;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .heritage-quote .quote-author {
+            color: #a89060;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
         /* Gallery */
         .gallery-filters {
             display: flex;
@@ -579,14 +664,6 @@
             color: #c0b8a8;
         }
 
-        .inventory-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .inventory-table tbody tr:hover {
-            background: #1a1a1a;
-        }
-
         .inventory-table .price-cell {
             color: #d4af37;
             font-weight: 500;
@@ -608,7 +685,7 @@
             background: #0a0a0a;
         }
 
-        /* ========== PURCHASE PAGE ========== */
+        /* Purchase Page */
         .purchase-container {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
@@ -672,15 +749,6 @@
             border-color: #d4af37;
         }
 
-        .form-group select option {
-            background As I've reached the character limit, let me continue with the purchase page section and the rest of the code:
-
-```css
-        .form-group select option {
-            background: #0f0f0f;
-            color: #e0dcd5;
-        }
-
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -702,12 +770,6 @@
         .payment-method input[type="radio"] {
             width: auto;
             accent-color: #d4af37;
-        }
-
-        .payment-method label {
-            margin-bottom: 0;
-            text-transform: none;
-            letter-spacing: 1px;
         }
 
         .purchase-summary {
@@ -780,10 +842,7 @@
             font-weight: 500;
         }
 
-        .breakdown-item.total .label {
-            color: #d4af37;
-        }
-
+        .breakdown-item.total .label,
         .breakdown-item.total .value {
             color: #d4af37;
         }
@@ -970,7 +1029,6 @@
             padding-top: 15px;
         }
 
-        /* Success Modal */
         .success-modal {
             text-align: center;
             padding: 20px;
@@ -1020,6 +1078,24 @@
             font-size: 0.8rem;
         }
 
+        .footer-credit {
+            color: #504838;
+            font-size: 0.65rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer-credit a {
+            color: #706858;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-credit a:hover {
+            color: #a89060;
+        }
+
         .back-home {
             text-align: center;
             margin-top: 35px;
@@ -1030,6 +1106,8 @@
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .video-section { grid-template-columns: 1fr; }
             .purchase-container { grid-template-columns: 1fr; }
+            .era-card { grid-template-columns: 1fr; text-align: center; }
+            .era-year { margin-bottom: 15px; }
         }
         @media (max-width: 900px) {
             .nav-bar { flex-direction: column; gap: 12px; padding: 15px 20px; }
@@ -1037,17 +1115,15 @@
             .about-content { grid-template-columns: 1fr; }
             .values-grid { grid-template-columns: repeat(2, 1fr); }
             .hero h1 { font-size: 2.5rem; }
+            .nav-menu { gap: 15px; flex-wrap: wrap; justify-content: center; }
         }
         @media (max-width: 700px) {
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .nav-menu { gap: 20px; flex-wrap: wrap; justify-content: center; }
         }
         @media (max-width: 600px) {
             .car-grid { grid-template-columns: 1fr; }
             .values-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2rem; letter-spacing: 3px; }
-            .hero h2 { font-size: 0.9rem; }
-            .section-title { font-size: 1.6rem; }
+            .hero h1 { font-size: 2rem; }
             .modal-header { flex-direction: column; }
             .modal-image { width: 100%; height: 200px; }
             .form-row { grid-template-columns: 1fr; }
@@ -1064,9 +1140,10 @@
     <div class="logo">LUX DEALERSHIP<span>EST. 2014</span></div>
     <ul class="nav-menu">
         <li><a href="#" class="nav-link active" data-section="home">HOME</a></li>
-        <li><a href="#" class="nav-link" data-section="about">ABOUT</a></li>
+        <li><a href="#" class="nav-link" data-section="heritage">HERITAGE</a></li>
         <li><a href="#" class="nav-link" data-section="gallery">GALLERY</a></li>
         <li><a href="#" class="nav-link" data-section="purchase">PURCHASE</a></li>
+        <li><a href="#" class="nav-link" data-section="about">ABOUT</a></li>
     </ul>
 </nav>
 
@@ -1100,38 +1177,84 @@
             <div class="offer-badge">20% OFF SERVICES</div>
             <p>Become a trusted LUX member and unlock <strong>20% off</strong> all concierge services.</p>
             <p><strong>Membership is complimentary with your first acquisition.</strong></p>
-            <a href="#" class="cta-btn nav-link" data-section="purchase" style="margin-top: 25px;">INQUIRE NOW</a>
+            <a href="#" class="cta-btn nav-link" data-section="purchase">INQUIRE NOW</a>
         </div>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="section">
+<!-- Heritage Section -->
+<section id="heritage" class="section">
     <div class="container">
-        <h2 class="section-title">ABOUT <span>LUX DEALERSHIP</span></h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Our Story</h3>
-                <p class="highlight-text">Founded in 2014 by Rudolph Maina, LUX DEALERSHIP began with a singular vision: to preserve and celebrate the golden era of automotive excellence.</p>
-                <p>What started as a passionate restoration project in a modest Westlands garage has grown into one of East Africa's most trusted classic car dealerships.</p>
-                <p>Today, LUX DEALERSHIP stands as a testament to timeless design, offering meticulously curated vehicles that tell stories of innovation, luxury, and the open road.</p>
-                <div class="founder-quote">"Every classic car has a soul. Our job is to help it find its next chapter."<br>— Rudolph Maina, Founder</div>
+        <h2 class="section-title">AUTOMOTIVE <span>Heritage</span></h2>
+        
+        <div class="heritage-timeline">
+            <div class="era-card">
+                <div class="era-year">
+                    <div class="year">1950s</div>
+                    <div class="era-name">Post-War Renaissance</div>
+                </div>
+                <div class="era-content">
+                    <h3>The Birth of the Sports Car</h3>
+                    <p>After World War II, European manufacturers turned aircraft engineering into automotive art. Jaguar launched the XK120, Mercedes revealed the 300SL Gullwing, and Ferrari began its legendary racing dynasty. This era defined what a sports car could be—light, powerful, and breathtakingly beautiful.</p>
+                    <div class="era-icon">🏁</div>
+                </div>
             </div>
-            <div class="contact-card">
-                <h3>Visit Us</h3>
-                <div class="contact-item"><span class="icon">📍</span><span class="contact-highlight">Westlands, near GTC Residence</span></div>
-                <div class="contact-item"><span class="icon">📞</span><span class="contact-highlight">+254 716 822 856</span></div>
-                <div class="contact-item"><span class="icon">✉️</span><span>concierge@luxdealership.com</span></div>
-                <div class="contact-item"><span class="icon">🕐</span><span>Mon - Sat: 9AM - 7PM</span></div>
-                <a href="#" class="cta-btn nav-link" data-section="gallery">VIEW COLLECTION</a>
+            
+            <div class="era-card">
+                <div class="era-year">
+                    <div class="year">1960s</div>
+                    <div class="era-name">The Golden Age</div>
+                </div>
+                <div class="era-content">
+                    <h3>Style, Speed, and Revolution</h3>
+                    <p>The swinging sixties brought us the Jaguar E-Type—called "the most beautiful car ever made" by Enzo Ferrari. The Porsche 911 debuted and would become the longest-running sports car lineage in history. American muscle emerged with the Chevrolet Impala defining cool. This was the decade when cars became cultural icons.</p>
+                    <div class="era-icon">🎸</div>
+                </div>
+            </div>
+            
+            <div class="era-card">
+                <div class="era-year">
+                    <div class="year">1970s</div>
+                    <div class="era-name">Muscle & Motorsport</div>
+                </div>
+                <div class="era-content">
+                    <h3>Raw Power Meets Racing Pedigree</h3>
+                    <p>The 1970s gave us the golden era of American muscle—the Chevrolet Chevelle SS with its legendary 454 LS6 engine producing 450 horsepower. Meanwhile, Ferrari continued refining its V8 engines, and BMW's motorsport division was born. These cars were unapologetically powerful, designed for those who understood that driving was an experience, not just transportation.</p>
+                    <div class="era-icon">💪</div>
+                </div>
+            </div>
+            
+            <div class="era-card">
+                <div class="era-year">
+                    <div class="year">1980s</div>
+                    <div class="era-name">German Precision</div>
+                </div>
+                <div class="era-content">
+                    <h3>Engineering Excellence</h3>
+                    <p>The 1980s saw German manufacturers reach new heights. The BMW M3 E30 was homologated for racing and became the most successful touring car ever. The Porsche 911 Turbo defined the supercar era. Mercedes-Benz perfected grand touring with the 500SL. These weren't just cars—they were precision instruments.</p>
+                    <div class="era-icon">🇩🇪</div>
+                </div>
+            </div>
+            
+            <div class="era-card">
+                <div class="era-year">
+                    <div class="year">1990s</div>
+                    <div class="era-name">Refined Luxury</div>
+                </div>
+                <div class="era-content">
+                    <h3>The Modern Classic Emerges</h3>
+                    <p>The 1990s bridged analog driving with modern reliability. The Lexus LS400 shocked the world by matching Mercedes in quality. The Range Rover Classic defined the luxury SUV segment. The Jaguar XJS and BMW 635CSi offered grand touring comfort with timeless style. These cars are now entering their prime as collector vehicles.</p>
+                    <div class="era-icon">✨</div>
+                </div>
             </div>
         </div>
-        <div class="values-grid">
-            <div class="value-item"><div class="value-icon">✓</div><h4>150-POINT INSPECTION</h4><p>Rigorous certification</p></div>
-            <div class="value-item"><div class="value-icon">📋</div><h4>FULL PROVENANCE</h4><p>Complete documentation</p></div>
-            <div class="value-item"><div class="value-icon">❄️</div><h4>CLIMATE STORAGE</h4><p>Premium care</p></div>
-            <div class="value-item"><div class="value-icon">🌍</div><h4>GLOBAL DELIVERY</h4><p>White-glove shipping</p></div>
+        
+        <div class="heritage-quote">
+            <p>"A classic car is not just a vehicle. It's a time machine, a work of art, and a piece of history you can drive."</p>
+            <div class="quote-author">— Rudolph Maina, Founder</div>
         </div>
+        
+        <div class="back-home"><a href="#" class="cta-btn nav-link" data-section="home">← BACK TO HOME</a></div>
     </div>
 </section>
 
@@ -1175,81 +1298,23 @@
                 
                 <form id="purchaseForm" onsubmit="handlePurchaseSubmit(event)">
                     <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" placeholder="John" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" placeholder="Doe" required>
-                        </div>
+                        <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required></div>
+                        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required></div>
                     </div>
-                    
                     <div class="form-row">
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="john@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="+254 700 000 000" required>
-                        </div>
+                        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@email.com" required></div>
+                        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+254 700 000 000" required></div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Select Vehicle</label>
-                        <select id="carSelect" required onchange="updatePurchaseSummary()">
-                            <option value="">— Choose your classic —</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Preferred Contact Method</label>
-                        <select required>
-                            <option value="phone">Phone Call</option>
-                            <option value="whatsapp">WhatsApp</option>
-                            <option value="email">Email</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Preferred Contact Time</label>
-                        <select required>
-                            <option value="morning">Morning (9AM - 12PM)</option>
-                            <option value="afternoon">Afternoon (12PM - 4PM)</option>
-                            <option value="evening">Evening (4PM - 7PM)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Financing Interest</label>
-                        <select required>
-                            <option value="cash">Cash Purchase</option>
-                            <option value="finance">Finance Inquiry</option>
-                            <option value="trade">Trade-In + Cash</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Additional Notes</label>
-                        <textarea rows="3" placeholder="Any specific questions or requests..."></textarea>
-                    </div>
-                    
+                    <div class="form-group"><label>Select Vehicle</label><select id="carSelect" required onchange="updatePurchaseSummary()"><option value="">— Choose your classic —</option></select></div>
+                    <div class="form-group"><label>Preferred Contact Method</label><select required><option value="phone">Phone Call</option><option value="whatsapp">WhatsApp</option><option value="email">Email</option></select></div>
+                    <div class="form-group"><label>Preferred Contact Time</label><select required><option value="morning">Morning (9AM - 12PM)</option><option value="afternoon">Afternoon (12PM - 4PM)</option><option value="evening">Evening (4PM - 7PM)</option></select></div>
+                    <div class="form-group"><label>Financing Interest</label><select required><option value="cash">Cash Purchase</option><option value="finance">Finance Inquiry</option><option value="trade">Trade-In + Cash</option></select></div>
+                    <div class="form-group"><label>Additional Notes</label><textarea rows="3" placeholder="Any specific questions or requests..."></textarea></div>
                     <div class="payment-methods">
-                        <div class="payment-method">
-                            <input type="radio" name="payment" id="wire" checked>
-                            <label for="wire">Wire Transfer</label>
-                        </div>
-                        <div class="payment-method">
-                            <input type="radio" name="payment" id="finance">
-                            <label for="finance">Financing</label>
-                        </div>
-                        <div class="payment-method">
-                            <input type="radio" name="payment" id="crypto">
-                            <label for="crypto">Cryptocurrency</label>
-                        </div>
+                        <div class="payment-method"><input type="radio" name="payment" id="wire" checked><label for="wire">Wire Transfer</label></div>
+                        <div class="payment-method"><input type="radio" name="payment" id="finance"><label for="finance">Financing</label></div>
+                        <div class="payment-method"><input type="radio" name="payment" id="crypto"><label for="crypto">Cryptocurrency</label></div>
                     </div>
-                    
                     <button type="submit" class="submit-btn">SUBMIT INQUIRY</button>
                     <p class="finance-note">* No obligation. We'll contact you to discuss options.</p>
                 </form>
@@ -1279,8 +1344,37 @@
                 </div>
             </div>
         </div>
-        
         <div class="back-home"><a href="#" class="cta-btn nav-link" data-section="home">← BACK TO HOME</a></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">ABOUT <span>LUX DEALERSHIP</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p class="highlight-text">Founded in 2014 by Rudolph Maina, LUX DEALERSHIP began with a singular vision: to preserve and celebrate the golden era of automotive excellence.</p>
+                <p>What started as a passionate restoration project in a modest Westlands garage has grown into one of East Africa's most trusted classic car dealerships.</p>
+                <p>Today, LUX DEALERSHIP stands as a testament to timeless design, offering meticulously curated vehicles that tell stories of innovation, luxury, and the open road.</p>
+                <div class="founder-quote">"Every classic car has a soul. Our job is to help it find its next chapter."<br>— Rudolph Maina, Founder</div>
+            </div>
+            <div class="contact-card">
+                <h3>Visit Us</h3>
+                <div class="contact-item"><span class="icon">📍</span><span class="contact-highlight">Westlands, near GTC Residence</span></div>
+                <div class="contact-item"><span class="icon">📞</span><span class="contact-highlight">+254 716 822 856</span></div>
+                <div class="contact-item"><span class="icon">✉️</span><span>concierge@luxdealership.com</span></div>
+                <div class="contact-item"><span class="icon">🕐</span><span>Mon - Sat: 9AM - 7PM</span></div>
+                <a href="#" class="cta-btn nav-link" data-section="gallery">VIEW COLLECTION</a>
+            </div>
+        </div>
+        <div class="values-grid">
+            <div class="value-item"><div class="value-icon">✓</div><h4>150-POINT INSPECTION</h4><p>Rigorous certification</p></div>
+            <div class="value-item"><div class="value-icon">📋</div><h4>FULL PROVENANCE</h4><p>Complete documentation</p></div>
+            <div class="value-item"><div class="value-icon">❄️</div><h4>CLIMATE STORAGE</h4><p>Premium care</p></div>
+            <div class="value-item"><div class="value-icon">🌍</div><h4>GLOBAL DELIVERY</h4><p>White-glove shipping</p></div>
+        </div>
     </div>
 </section>
 
@@ -1291,12 +1385,12 @@
         <div class="success-modal">
             <div class="success-icon">✓</div>
             <h3>Inquiry Received</h3>
-            <p>Thank you for your interest. Our LUX Concierge team will contact you within 2 hours at your preferred time.</p>
+            <p>Thank you for your interest. Our LUX Concierge team will contact you within 2 hours.</p>
             <p style="font-size: 0.9rem; margin-top: 20px;">📞 For immediate assistance: +254 716 822 856</p>
             <button class="cta-btn" style="margin-top: 25px;" onclick="document.getElementById('successModal').classList.remove('active')">CLOSE</button>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Car Details Modal -->
 <div class="modal-overlay" id="carModal">
@@ -1311,6 +1405,7 @@
     <div class="container">
         <p class="footer-main">© 2026 LUX DEALERSHIP</p>
         <p class="footer-sub">Westlands, near GTC Residence · +254 716 822 856 · Founded 2014 by Rudolph Maina</p>
+        <p class="footer-credit">Designed with passion for automotive excellence · <a href="#" onclick="alert('Built with HTML, CSS & JavaScript')">✦</a></p>
     </div>
 </footer>
 
@@ -1337,7 +1432,6 @@
     const closeModal = document.getElementById('closeModal');
     const filterBtns = document.querySelectorAll('.filter-btn');
     
-    // Populate car select dropdown
     function populateCarSelect() {
         const select = document.getElementById('carSelect');
         if (!select) return;
@@ -1350,56 +1444,17 @@
         });
     }
     
-    // Update purchase summary
     window.updatePurchaseSummary = function() {
         const select = document.getElementById('carSelect');
         const summaryDiv = document.querySelector('#purchaseSummaryContent');
         if (!select || !summaryDiv) return;
-        
         const carId = parseInt(select.value);
         const car = cars.find(c => c.id === carId);
-        
         if (car) {
             const total = car.price + 299 + 1200;
-            summaryDiv.innerHTML = `
-                <div class="selected-car-display">
-                    <div class="selected-car-image"><img src="${car.image}" alt="${car.make} ${car.model}"></div>
-                    <p class="selected-car-name">${car.year} ${car.make} ${car.model}</p>
-                    <p class="selected-car-price">$${car.price.toLocaleString()}</p>
-                </div>
-                <div class="price-breakdown">
-                    <div class="breakdown-item"><span class="label">Vehicle Price</span><span class="value">$${car.price.toLocaleString()}</span></div>
-                    <div class="breakdown-item"><span class="label">Documentation Fee</span><span class="value">$299</span></div>
-                    <div class="breakdown-item"><span class="label">Delivery (Estimated)</span><span class="value">$1,200</span></div>
-                    <div class="breakdown-item total"><span class="label">Total Estimate</span><span class="value">$${total.toLocaleString()}</span></div>
-                </div>
-                <div class="trust-badges">
-                    <div class="badge"><span class="badge-icon">🔒</span><span class="badge-text">Secure</span></div>
-                    <div class="badge"><span class="badge-icon">✅</span><span class="badge-text">150-Point</span></div>
-                    <div class="badge"><span class="badge-icon">🚚</span><span class="badge-text">Global</span></div>
-                </div>
-            `;
+            summaryDiv.innerHTML = `<div class="selected-car-display"><div class="selected-car-image"><img src="${car.image}"></div><p class="selected-car-name">${car.year} ${car.make} ${car.model}</p><p class="selected-car-price">$${car.price.toLocaleString()}</p></div><div class="price-breakdown"><div class="breakdown-item"><span class="label">Vehicle Price</span><span class="value">$${car.price.toLocaleString()}</span></div><div class="breakdown-item"><span class="label">Documentation Fee</span><span class="value">$299</span></div><div class="breakdown-item"><span class="label">Delivery (Estimated)</span><span class="value">$1,200</span></div><div class="breakdown-item total"><span class="label">Total Estimate</span><span class="value">$${total.toLocaleString()}</span></div></div><div class="trust-badges"><div class="badge"><span class="badge-icon">🔒</span><span class="badge-text">Secure</span></div><div class="badge"><span class="badge-icon">✅</span><span class="badge-text">150-Point</span></div><div class="badge"><span class="badge-icon">🚚</span><span class="badge-text">Global</span></div></div>`;
         } else {
-            summaryDiv.innerHTML = `
-                <div class="selected-car-display">
-                    <div class="selected-car-image" style="background: #1a1a1a; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 3rem; opacity: 0.3;">🏎️</span>
-                    </div>
-                    <p class="selected-car-name">No vehicle selected</p>
-                    <p class="selected-car-price">—</p>
-                </div>
-                <div class="price-breakdown">
-                    <div class="breakdown-item"><span class="label">Vehicle Price</span><span class="value">$0</span></div>
-                    <div class="breakdown-item"><span class="label">Documentation Fee</span><span class="value">$299</span></div>
-                    <div class="breakdown-item"><span class="label">Delivery (Estimated)</span><span class="value">$1,200</span></div>
-                    <div class="breakdown-item total"><span class="label">Total Estimate</span><span class="value">$1,499</span></div>
-                </div>
-                <div class="trust-badges">
-                    <div class="badge"><span class="badge-icon">🔒</span><span class="badge-text">Secure</span></div>
-                    <div class="badge"><span class="badge-icon">✅</span><span class="badge-text">150-Point</span></div>
-                    <div class="badge"><span class="badge-icon">🚚</span><span class="badge-text">Global</span></div>
-                </div>
-            `;
+            summaryDiv.innerHTML = `<div class="selected-car-display"><div class="selected-car-image" style="background: #1a1a1a; display: flex; align-items: center; justify-content: center;"><span style="font-size: 3rem; opacity: 0.3;">🏎️</span></div><p class="selected-car-name">No vehicle selected</p><p class="selected-car-price">—</p></div><div class="price-breakdown"><div class="breakdown-item"><span class="label">Vehicle Price</span><span class="value">$0</span></div><div class="breakdown-item"><span class="label">Documentation Fee</span><span class="value">$299</span></div><div class="breakdown-item"><span class="label">Delivery (Estimated)</span><span class="value">$1,200</span></div><div class="breakdown-item total"><span class="label">Total Estimate</span><span class="value">$1,499</span></div></div><div class="trust-badges"><div class="badge"><span class="badge-icon">🔒</span><span class="badge-text">Secure</span></div><div class="badge"><span class="badge-icon">✅</span><span class="badge-text">150-Point</span></div><div class="badge"><span class="badge-icon">🚚</span><span class="badge-text">Global</span></div></div>`;
         }
     };
     
